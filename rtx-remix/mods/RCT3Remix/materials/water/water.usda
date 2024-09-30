@@ -1,0 +1,1601 @@
+#usda 1.0
+(
+    upAxis = "Z"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_F5D233B1F1D2C131"
+        {
+            over "Shader"
+            {
+                asset inputs:normalmap_texture = @ripple_01_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:reflection_roughness_constant = 0 (
+                    customData = {
+                        float default = 0.5
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Amount"
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_13D7D670704F6F91"
+        {
+            over "Shader"
+            {
+                asset inputs:normalmap_texture = @ripple_02_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:reflection_roughness_constant = 0 (
+                    customData = {
+                        float default = 0.5
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Amount"
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_9F872EF03F9480A1"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999 (
+                    customData = {
+                        float default = 1.3
+                        dictionary range = {
+                            float max = 3
+                            float min = 1
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Index of Refraction"
+                    doc = """Index of Refraction of the material
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @water_normal.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Normal"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                int inputs:sprite_sheet_cols = 20 (
+                    customData = {
+                        int default = 1
+                        dictionary range = {
+                            int max = 255
+                            int min = 1
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet Columns"
+                    doc = """Number of columns the spritesheet across all textures is divided into.
+
+"""
+                    hidden = false
+                )
+                int inputs:sprite_sheet_fps = 30 (
+                    customData = {
+                        int default = 0
+                        dictionary range = {
+                            int max = 255
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet FPS"
+                    doc = """Framerate in Frames Per Second to use for the spritesheet across all textures. Note that a value of 0 disables this functionality.
+
+"""
+                    hidden = false
+                )
+                int inputs:sprite_sheet_rows = 1 (
+                    customData = {
+                        int default = 1
+                        dictionary range = {
+                            int max = 255
+                            int min = 1
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet Rows"
+                    doc = """Number of row the spritesheet across all textures is divided into.
+
+"""
+                    hidden = false
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Thin-walled"
+                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
+
+"""
+                    hidden = false
+                )
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
+                    customData = {
+                        float3 default = (0.97, 0.97, 0.97)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Color"
+                    doc = """Expected transmittance after the specified transmittance distance through the volume.
+
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+                float inputs:transmittance_measurement_distance = 5 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 65504
+                            float min = 0.001
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Measurement Distance"
+                    doc = """Distance to match the transmittance through the volume at.
+
+"""
+                    hidden = false
+                )
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_00A1AF0737A770E4"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @00A1AF0737A770E4_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_0E57687E5E9AD92A"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @0E57687E5E9AD92A_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_1C63EB467EF9DBD1"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @1C63EB467EF9DBD1_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_2DECDDAA16EB8F79"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @2DECDDAA16EB8F79_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_2F684B8CBEEA068F"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @2F684B8CBEEA068F_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_3DC4015DC2F54CF1"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @3DC4015DC2F54CF1_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_4BA6311EEB1CDD33"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @4BA6311EEB1CDD33_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_5AB8D4946DEE4A2F"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @5AB8D4946DEE4A2F_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_5BC2950B9429B174"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @5BC2950B9429B174_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_6A208FBFAF08CF66"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @6A208FBFAF08CF66_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_8E212CB0CD3D217C"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @8E212CB0CD3D217C_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_21B8289C5D9EF88A"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @21B8289C5D9EF88A_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_30C7E03C22A31B6D"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @30C7E03C22A31B6D_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_52B58C11036B4697"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @52B58C11036B4697_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_251D5C387B2A55AA"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @251D5C387B2A55AA_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_623A38F6D98605C0"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @623A38F6D98605C0_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_754D210EAD5347BB"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @754D210EAD5347BB_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_779E701DA8F48CD4"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @779E701DA8F48CD4_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_7306EC23BB9659AE"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @7306EC23BB9659AE_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_20622C4EEC7CCE4D"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @20622C4EEC7CCE4D_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_A1EC9D0C92E44A6D"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @A1EC9D0C92E44A6D_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_A285B1235B1C2D93"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @A285B1235B1C2D93_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_B34D38828934FB2D"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @B34D38828934FB2D_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_BFB3E9D00DAA8CAC"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @BFB3E9D00DAA8CAC_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_D870D58D582300BA"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @D870D58D582300BA_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_DECF443D608D850D"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999 (
+                    customData = {
+                        float default = 1.3
+                        dictionary range = {
+                            float max = 3
+                            float min = 1
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Index of Refraction"
+                    doc = """Index of Refraction of the material
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @DECF443D608D850D_normal.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Normal"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Thin-walled"
+                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
+
+"""
+                    hidden = false
+                )
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
+                    customData = {
+                        float3 default = (0.97, 0.97, 0.97)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Color"
+                    doc = """Expected transmittance after the specified transmittance distance through the volume.
+
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+                float inputs:transmittance_measurement_distance = 5 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 65504
+                            float min = 0.001
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Measurement Distance"
+                    doc = """Distance to match the transmittance through the volume at.
+
+"""
+                    hidden = false
+                )
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_DF54DA49D2690C53"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @DF54DA49D2690C53_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_E33A0E36E1447315"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @E33A0E36E1447315_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_F63A57542ECDAAFD"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @F63A57542ECDAAFD_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_F147E7C2A7E67DA8"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @F147E7C2A7E67DA8_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_F891D38BFAD9BEC8"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @F891D38BFAD9BEC8_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_FED76693FF4044D4"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @FED76693FF4044D4_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        over "mat_317804973336FF0C"
+        {
+            over "Shader"
+            {
+                asset inputs:normalmap_texture = @waterfall_ripple_01_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:reflection_roughness_constant = 0 (
+                    customData = {
+                        float default = 0.5
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Amount"
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_D1455FC7223F81E6"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Amount"
+                    doc = """How metallic is this material, 0 for not at all, 1 for fully metallic. (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @Water_fall_center_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:reflection_roughness_constant = 0 (
+                    customData = {
+                        float default = 0.5
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Amount"
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_A4194CE8C2ACB888"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Amount"
+                    doc = """How metallic is this material, 0 for not at all, 1 for fully metallic. (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @Water_fall_border_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:reflection_roughness_constant = 0 (
+                    customData = {
+                        float default = 0.5
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Amount"
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+            }
+        }
+    }
+
+    over "meshes"
+    {
+        over "mesh_63807C0882F8F491"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_29E71FED68D437A3"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_85342F48858B53FA"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -8.00000011920929, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_ADDA846A45DE75C0"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_843629D2343B7D59"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -1.0000000149011612, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_DB199040C8384EBE"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_6D7227BC51F9801E"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_48A4874EC8BF9D86"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -0.10000000149011612, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_83AB7F1AB9B6C029"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 9, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_1F01A022531CB048"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_845FF9BB1E3E0473"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -2, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_B1954C0F1E4BB0AD"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -2.0000000298023224, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_A66D7F6E92AC1B3B"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0.9, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_6EBE9C6668DD4028"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -1, 4.3178551817492225e-16)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_51636393460124B7"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 4.3178551817492225e-16)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_C83260901A8CB14B"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 4, 4.3178551817492225e-16)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_2BDCD94D4ADF8CBA"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_7D6B78A0AE86828B"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -1.0000000149011612, 4.3178551817492225e-16)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_C6352801726FD398"
+        {
+            def Xform "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 12, 4.3178551817492225e-16)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_A36A62440E8AD3E5"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_CD479BAA066CF48F"
+        {
+            def Xform "Water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (2.5, 2.5, 1)
+                double3 xformOp:translate = (0, 1, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_F2F5073BF9D9BBC5"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_AB700BFE70756279"
+        {
+            def Xform "Water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/water.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -4.000000059604645, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_8E6D1DCAE2D00CB0"
+        {
+            def Xform "Water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/mesh_8E6D1DCAE2D00CB0.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (90, 180, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 14.100000210106373, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_0756631A34E5506D"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/mesh_0756631A34E5506D.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (90, 180, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 14.000000208616257, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+    }
+
+    over "instances"
+    {
+        over "inst_8E6D1DCAE2D00CB0_0"
+        {
+            over "Water"
+            {
+                double3 xformOp:translate = (0, 14.000000208616257, 0)
+            }
+        }
+    }
+}
+
+over "Looks"
+{
+    def Material "Water"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Water/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Water/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Water/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+            float inputs:ior_constant = 1.3299999 (
+                customData = {
+                    float default = 1.3
+                    dictionary range = {
+                        float max = 3
+                        float min = 1
+                    }
+                }
+                displayGroup = "Specular"
+                displayName = "Index of Refraction"
+                doc = """Index of Refraction of the material
+
+"""
+                hidden = false
+            )
+            asset inputs:normalmap_texture = @water_normal.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Normal"
+                displayName = "Normal Map"
+                hidden = false
+                renderType = "texture_2d"
+            )
+            int inputs:sprite_sheet_cols = 20 (
+                customData = {
+                    int default = 1
+                    dictionary range = {
+                        int max = 255
+                        int min = 1
+                    }
+                }
+                displayGroup = "Animation"
+                displayName = "Sprite Sheet Columns"
+                doc = """Number of columns the spritesheet across all textures is divided into.
+
+"""
+                hidden = false
+            )
+            int inputs:sprite_sheet_fps = 15 (
+                customData = {
+                    int default = 0
+                    dictionary range = {
+                        int max = 255
+                        int min = 0
+                    }
+                }
+                displayGroup = "Animation"
+                displayName = "Sprite Sheet FPS"
+                doc = """Framerate in Frames Per Second to use for the spritesheet across all textures. Note that a value of 0 disables this functionality.
+
+"""
+                hidden = false
+            )
+            int inputs:sprite_sheet_rows = 1 (
+                customData = {
+                    int default = 1
+                    dictionary range = {
+                        int max = 255
+                        int min = 1
+                    }
+                }
+                displayGroup = "Animation"
+                displayName = "Sprite Sheet Rows"
+                doc = """Number of row the spritesheet across all textures is divided into.
+
+"""
+                hidden = false
+            )
+            float inputs:thin_wall_thickness = 1 (
+                customData = {
+                    float default = 1
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0.001
+                    }
+                    dictionary soft_range = {
+                        float max = 1
+                        float min = 0.001
+                    }
+                }
+                displayGroup = "Specular"
+                displayName = "Thin-walled material thickness"
+                doc = """Simulated thickness for thin-walled materials (0 disables thin-walled mode)
+
+"""
+                hidden = false
+            )
+            bool inputs:thin_walled = 0 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Specular"
+                displayName = "Thin-walled"
+                doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
+
+"""
+                hidden = false
+            )
+            color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
+                customData = {
+                    float3 default = (0.97, 0.97, 0.97)
+                    dictionary range = {
+                        float3 max = (1, 1, 1)
+                        float3 min = (0, 0, 0)
+                    }
+                }
+                displayGroup = "Volume"
+                displayName = "Transmittance Color"
+                doc = """Expected transmittance after the specified transmittance distance through the volume.
+
+"""
+                hidden = false
+                renderType = "color"
+            )
+            float inputs:transmittance_measurement_distance = 10 (
+                customData = {
+                    float default = 1
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0.001
+                    }
+                }
+                displayGroup = "Volume"
+                displayName = "Transmittance Measurement Distance"
+                doc = """Distance to match the transmittance through the volume at.
+
+"""
+                hidden = false
+            )
+            bool inputs:use_diffuse_layer = 0 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Volume"
+                displayName = "Use diffuse layer"
+                doc = """When set, simulates a diffuse layer on top of the material
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+}
+

@@ -1,0 +1,3405 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_5C610F0141D6F75B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5C610F0141D6F75B_albedo.dds@
+                asset inputs:normalmap_texture = @5C610F0141D6F75B_normal.dds@
+                asset inputs:reflectionroughness_texture = @5C610F0141D6F75B_rough.dds@
+            }
+        }
+
+        over "mat_805E917CCB40C18C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @805E917CCB40C18C_albedo.dds@
+                asset inputs:normalmap_texture = @805E917CCB40C18C_normal.dds@
+                asset inputs:reflectionroughness_texture = @805E917CCB40C18C_rough.dds@
+            }
+        }
+
+        over "mat_1F1CBB5D46410E99"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1F1CBB5D46410E99_albedo.dds@
+                asset inputs:normalmap_texture = @1F1CBB5D46410E99_normal.dds@
+                asset inputs:reflectionroughness_texture = @1F1CBB5D46410E99_rough.dds@
+            }
+        }
+
+        over "mat_51C7F3DEE20701C8"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @51C7F3DEE20701C8_albedo.dds@
+                asset inputs:normalmap_texture = @51C7F3DEE20701C8_normal.dds@
+                asset inputs:reflectionroughness_texture = @51C7F3DEE20701C8_rough.dds@
+            }
+        }
+
+        over "mat_33F6AE0328021D18"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @33F6AE0328021D18_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:enable_emission = 0
+                bool inputs:enable_thin_film = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Enable Iridescence"
+                    doc = """Adds a thin film coating to the material
+
+"""
+                    hidden = false
+                )
+                bool inputs:inverted_blend = 0
+                asset inputs:metallic_texture = @33F6AE0328021D18_metal.dds@
+                asset inputs:normalmap_texture = @33F6AE0328021D18_normal.dds@
+                asset inputs:reflectionroughness_texture = @33F6AE0328021D18_rough.dds@
+                float inputs:thin_film_thickness_constant = 200 (
+                    customData = {
+                        float default = 200
+                        dictionary range = {
+                            float max = 1500
+                            float min = 0.001
+                        }
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Thickness"
+                    doc = """Thickness of the thin film in nanometers if not specified in albedo texture
+
+"""
+                    hidden = false
+                )
+                bool inputs:thin_film_thickness_from_albedo_alpha = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Use Opacity as Thickness"
+                    doc = """Uses the alpha channel from albedo as source for the thin film thickness. Alpha value is scaled by 1500 and represents thickness in nanometers. Opacity becomes fully opaque in this case.
+
+"""
+                    hidden = false
+                )
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_CBC0D1E16DCA29F3"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.33 (
+                    customData = {
+                        float default = 1.3
+                        dictionary range = {
+                            float max = 3
+                            float min = 1
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Index of Refraction"
+                    doc = """Index of Refraction of the material
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @CBC0D1E16DCA29F3_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Normal"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Thin-walled"
+                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
+
+"""
+                    hidden = false
+                )
+                asset inputs:transmittance_texture = @CBC0D1E16DCA29F3_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Color/Diffuse Albedo Texture"
+                    doc = """Texture map for either the transmittance color of the material, or the albedo color of the diffuse layer
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:use_diffuse_layer = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Use diffuse layer"
+                    doc = """When set, simulates a diffuse layer on top of the material
+
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_667FCF605E3689AC"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0.39999998
+                float inputs:reflection_roughness_constant = 0.099999994
+            }
+        }
+
+        over "mat_A97FB1590F282E5D"
+        {
+            over "Shader"
+            {
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_99E1214743BE4643"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @99E1214743BE4643_albedo.dds@
+                float inputs:displace_in = 0.002
+                asset inputs:height_texture = @99E1214743BE4643_height.dds@
+                asset inputs:metallic_texture = @99E1214743BE4643_metal.dds@
+                asset inputs:normalmap_texture = @99E1214743BE4643_normal.dds@
+                asset inputs:reflectionroughness_texture = @99E1214743BE4643_rough.dds@
+            }
+        }
+
+        over "mat_06F213DA03FC8B64"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @06F213DA03FC8B64_albedo.dds@
+                float inputs:emissive_intensity = 100
+                asset inputs:emissive_mask_texture = @06F213DA03FC8B64_emissive.dds@
+                bool inputs:enable_emission = 1
+                asset inputs:normalmap_texture = @06F213DA03FC8B64_normal.dds@
+                asset inputs:reflectionroughness_texture = @06F213DA03FC8B64_rough.dds@
+            }
+        }
+
+        over "mat_F5154B400E594B3C"
+        {
+            over "Shader"
+            {
+            }
+        }
+
+        over "mat_DC4EFBE8798F6A9C"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.05
+            }
+        }
+
+        over "mat_9618013046A1A008"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.05
+            }
+        }
+
+        over "mat_61DBBF5643B9D8DA"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.05
+            }
+        }
+
+        over "mat_73E942F96E93935F"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @73E942F96E93935F_albedo.dds@
+                bool inputs:inverted_blend = 0
+                asset inputs:normalmap_texture = @73E942F96E93935F_normal.dds@
+                asset inputs:reflectionroughness_texture = @73E942F96E93935F_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_4D210763606FD4FE"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4D210763606FD4FE_albedo.dds@
+                asset inputs:normalmap_texture = @4D210763606FD4FE_normal.dds@
+                asset inputs:reflectionroughness_texture = @4D210763606FD4FE_rough.dds@
+            }
+        }
+
+        over "mat_124F2D7A35387DFD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @124F2D7A35387DFD_albedo.dds@
+                asset inputs:normalmap_texture = @124F2D7A35387DFD_normal.dds@
+                asset inputs:reflectionroughness_texture = @124F2D7A35387DFD_rough.dds@
+            }
+        }
+
+        over "mat_0900A63EFA659900"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @0900A63EFA659900_albedo.dds@
+                asset inputs:normalmap_texture = @0900A63EFA659900_normal.dds@
+                asset inputs:reflectionroughness_texture = @0900A63EFA659900_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_9A93DEDFCA8DB471"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 0
+                asset inputs:diffuse_texture = @9A93DEDFCA8DB471_albedo.dds@
+                bool inputs:enable_thin_film = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Enable Iridescence"
+                    doc = """Adds a thin film coating to the material
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @9A93DEDFCA8DB471_normal.dds@
+                asset inputs:reflectionroughness_texture = @9A93DEDFCA8DB471_rough.dds@
+                float inputs:thin_film_thickness_constant = 1 (
+                    customData = {
+                        float default = 200
+                        dictionary range = {
+                            float max = 1500
+                            float min = 0.001
+                        }
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Thickness"
+                    doc = """Thickness of the thin film in nanometers if not specified in albedo texture
+
+"""
+                    hidden = false
+                )
+                bool inputs:thin_film_thickness_from_albedo_alpha = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Iridescence"
+                    displayName = "Use Opacity as Thickness"
+                    doc = """Uses the alpha channel from albedo as source for the thin film thickness. Alpha value is scaled by 1500 and represents thickness in nanometers. Opacity becomes fully opaque in this case.
+
+"""
+                    hidden = false
+                )
+                bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_A3DB7BC8B3131FBA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A3DB7BC8B3131FBA_albedo.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @A3DB7BC8B3131FBA_normal.dds@
+                asset inputs:reflectionroughness_texture = @A3DB7BC8B3131FBA_rough.dds@
+            }
+        }
+
+        over "mat_7A127DB9154B6596"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7A127DB9154B6596_albedo.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @7A127DB9154B6596_normal.dds@
+                asset inputs:reflectionroughness_texture = @7A127DB9154B6596_rough.dds@
+            }
+        }
+
+        over "mat_A237218754AA5CF9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A237218754AA5CF9_albedo.dds@
+                asset inputs:normalmap_texture = @A237218754AA5CF9_normal.dds@
+                float inputs:reflection_roughness_constant = 0.5 (
+                    doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                    hidden = false
+                )
+                asset inputs:reflectionroughness_texture = @A237218754AA5CF9_rough.dds@
+            }
+        }
+
+        over "mat_A1E6E2042798799A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A1E6E2042798799A_albedo.dds@
+                asset inputs:normalmap_texture = @A1E6E2042798799A_normal.dds@
+                asset inputs:reflectionroughness_texture = @A1E6E2042798799A_rough.dds@
+            }
+        }
+
+        over "mat_831A5BBC0A327BD2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @831A5BBC0A327BD2_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @831A5BBC0A327BD2_height.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @831A5BBC0A327BD2_normal.dds@
+                asset inputs:reflectionroughness_texture = @831A5BBC0A327BD2_rough.dds@
+            }
+        }
+
+        over "mat_E5FCC54AB7D60795"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E5FCC54AB7D60795_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @E5FCC54AB7D60795_height.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @E5FCC54AB7D60795_normal.dds@
+                asset inputs:reflectionroughness_texture = @E5FCC54AB7D60795_rough.dds@
+            }
+        }
+
+        over "mat_8665F2FDFEC064C0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8665F2FDFEC064C0_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @8665F2FDFEC064C0_albedo.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @8665F2FDFEC064C0_normal.dds@
+                asset inputs:reflectionroughness_texture = @8665F2FDFEC064C0_rough.dds@
+            }
+        }
+
+        over "mat_920CDB404C9DF4D4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @920CDB404C9DF4D4_albedo.dds@
+                float inputs:metallic_constant = 0.39999998
+                asset inputs:normalmap_texture = @920CDB404C9DF4D4_normal.dds@
+                asset inputs:reflectionroughness_texture = @920CDB404C9DF4D4_rough.dds@
+            }
+        }
+
+        over "mat_AB4090125B2F8130"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AB4090125B2F8130_albedo.dds@
+                asset inputs:normalmap_texture = @AB4090125B2F8130_normal.dds@
+                asset inputs:reflectionroughness_texture = @AB4090125B2F8130_rough.dds@
+            }
+        }
+
+        over "mat_8A6116817C4B6796"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8A6116817C4B6796_albedo.dds@
+                asset inputs:normalmap_texture = @8A6116817C4B6796_normal.dds@
+                asset inputs:reflectionroughness_texture = @8A6116817C4B6796_rough.dds@
+            }
+        }
+
+        over "mat_81C1EB4D57C2E1E0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @81C1EB4D57C2E1E0_albedo.dds@
+                asset inputs:normalmap_texture = @81C1EB4D57C2E1E0_normal.dds@
+                asset inputs:reflectionroughness_texture = @81C1EB4D57C2E1E0_rough.dds@
+            }
+        }
+
+        over "mat_F1A24609E49A10DA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F1A24609E49A10DA_albedo.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @F1A24609E49A10DA_normal.dds@
+                asset inputs:reflectionroughness_texture = @F1A24609E49A10DA_rough.dds@
+            }
+        }
+
+        over "mat_DC0029F5D6E979EB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @DC0029F5D6E979EB_albedo.dds@
+                asset inputs:normalmap_texture = @DC0029F5D6E979EB_normal.dds@
+                asset inputs:reflectionroughness_texture = @DC0029F5D6E979EB_rough.dds@
+            }
+        }
+
+        over "mat_D1322B620137BB64"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D1322B620137BB64_albedo.dds@
+                asset inputs:normalmap_texture = @D1322B620137BB64_normal.dds@
+                asset inputs:reflectionroughness_texture = @D1322B620137BB64_rough.dds@
+            }
+        }
+
+        over "mat_E36D3C866FEE24B9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E36D3C866FEE24B9_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @E36D3C866FEE24B9_height.dds@
+                asset inputs:normalmap_texture = @E36D3C866FEE24B9_normal.dds@
+                asset inputs:reflectionroughness_texture = @E36D3C866FEE24B9_rough.dds@
+            }
+        }
+
+        over "mat_7BBF981E0DBEE824"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7BBF981E0DBEE824_albedo.dds@
+                float inputs:reflection_roughness_constant = 0.29999998
+            }
+        }
+
+        over "mat_56DFBED12E306114"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @56DFBED12E306114_albedo.dds@
+                asset inputs:normalmap_texture = @56DFBED12E306114_normal.dds@
+                asset inputs:reflectionroughness_texture = @56DFBED12E306114_rough.dds@
+            }
+        }
+
+        over "mat_3BBEE45742B71201"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3BBEE45742B71201_albedo.dds@
+                asset inputs:normalmap_texture = @3BBEE45742B71201_normal.dds@
+                asset inputs:reflectionroughness_texture = @3BBEE45742B71201_rough.dds@
+            }
+        }
+
+        over "mat_C933EBEC8DE847F5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C933EBEC8DE847F5_albedo.dds@
+                asset inputs:normalmap_texture = @C933EBEC8DE847F5_normal.dds@
+                asset inputs:reflectionroughness_texture = @C933EBEC8DE847F5_rough.dds@
+            }
+        }
+
+        over "mat_689F18C6392D949B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @689F18C6392D949B_albedo.dds@
+                asset inputs:normalmap_texture = @689F18C6392D949B_normal.dds@
+                asset inputs:reflectionroughness_texture = @689F18C6392D949B_rough.dds@
+            }
+        }
+
+        over "mat_129C3B6CE245EF4E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @129C3B6CE245EF4E_albedo.dds@
+                asset inputs:normalmap_texture = @129C3B6CE245EF4E_normal.dds@
+                asset inputs:reflectionroughness_texture = @129C3B6CE245EF4E_rough.dds@
+            }
+        }
+
+        over "mat_E676937862883640"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E676937862883640_albedo.dds@
+                float inputs:metallic_constant = 0.29999998
+                asset inputs:normalmap_texture = @E676937862883640_normal.dds@
+                asset inputs:reflectionroughness_texture = @E676937862883640_rough.dds@
+            }
+        }
+
+        over "mat_D3C3E50DF2D18B04"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D3C3E50DF2D18B04_albedo.dds@
+                asset inputs:normalmap_texture = @D3C3E50DF2D18B04_normal.dds@
+                asset inputs:reflectionroughness_texture = @D3C3E50DF2D18B04_rough.dds@
+            }
+        }
+
+        over "mat_FD961BFE5C861D2D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @FD961BFE5C861D2D_albedo.dds@
+                float inputs:metallic_constant = 0.39999998
+                asset inputs:normalmap_texture = @FD961BFE5C861D2D_normal.dds@
+                asset inputs:reflectionroughness_texture = @FD961BFE5C861D2D_rough.dds@
+            }
+        }
+
+        over "mat_586E7C30584B84E0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @586E7C30584B84E0_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @586E7C30584B84E0_albedo.dds@
+                asset inputs:normalmap_texture = @586E7C30584B84E0_normal.dds@
+                asset inputs:reflectionroughness_texture = @586E7C30584B84E0_rough.dds@
+            }
+        }
+
+        over "mat_4EAD2A55C65F7925"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4EAD2A55C65F7925_albedo.dds@
+                asset inputs:normalmap_texture = @4EAD2A55C65F7925_normal.dds@
+                asset inputs:reflectionroughness_texture = @4EAD2A55C65F7925_rough.dds@
+            }
+        }
+
+        over "mat_829F427ED49182AA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @829F427ED49182AA_albedo.dds@
+                asset inputs:normalmap_texture = @829F427ED49182AA_normal.dds@
+                asset inputs:reflectionroughness_texture = @829F427ED49182AA_rough.dds@
+            }
+        }
+
+        over "mat_16149780AED59032"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @16149780AED59032_albedo.dds@
+                asset inputs:normalmap_texture = @16149780AED59032_normal.dds@
+                asset inputs:reflectionroughness_texture = @16149780AED59032_rough.dds@
+            }
+        }
+
+        over "mat_5FAF4311E617A531"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5FAF4311E617A531_albedo.dds@
+                asset inputs:normalmap_texture = @5FAF4311E617A531_normal.dds@
+                asset inputs:reflectionroughness_texture = @5FAF4311E617A531_rough.dds@
+            }
+        }
+
+        over "mat_A4C2C3ED25FA1AB1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A4C2C3ED25FA1AB1_albedo.dds@
+                asset inputs:normalmap_texture = @A4C2C3ED25FA1AB1_normal.dds@
+                asset inputs:reflectionroughness_texture = @A4C2C3ED25FA1AB1_rough.dds@
+            }
+        }
+
+        over "mat_AB792121C1503068"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AB792121C1503068_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @AB792121C1503068_height.dds@
+                float inputs:metallic_constant = 0.59999996
+                asset inputs:metallic_texture = @AB792121C1503068_metal.dds@
+                asset inputs:normalmap_texture = @AB792121C1503068_normal.dds@
+                asset inputs:reflectionroughness_texture = @AB792121C1503068_rough.dds@
+            }
+        }
+
+        over "mat_D257ABBCA943CDE3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D257ABBCA943CDE3_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @D257ABBCA943CDE3_height.dds@
+                asset inputs:normalmap_texture = @D257ABBCA943CDE3_normal.dds@
+                asset inputs:reflectionroughness_texture = @D257ABBCA943CDE3_rough.dds@
+            }
+        }
+
+        over "mat_CABD9175031D7F38"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CABD9175031D7F38_albedo.dds@
+                float inputs:displace_in = 0.001
+                asset inputs:height_texture = @CABD9175031D7F38_height.dds@
+                asset inputs:metallic_texture = @CABD9175031D7F38_metal.dds@
+                asset inputs:normalmap_texture = @CABD9175031D7F38_normal.dds@
+                asset inputs:reflectionroughness_texture = @CABD9175031D7F38_rough.dds@
+            }
+        }
+
+        over "mat_E61DB1D802BE37BF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E61DB1D802BE37BF_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @E61DB1D802BE37BF_height.dds@
+                asset inputs:normalmap_texture = @E61DB1D802BE37BF_normal.dds@
+                asset inputs:reflectionroughness_texture = @E61DB1D802BE37BF_rough.dds@
+            }
+        }
+
+        over "mat_DC8A48CF379C0314"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @DC8A48CF379C0314_albedo.dds@
+                asset inputs:metallic_texture = @DC8A48CF379C0314_metal.dds@
+                asset inputs:normalmap_texture = @DC8A48CF379C0314_normal.dds@
+                asset inputs:reflectionroughness_texture = @DC8A48CF379C0314_rough.dds@
+            }
+        }
+
+        over "mat_690555F727B815B1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @690555F727B815B1_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @690555F727B815B1_height.dds@
+                asset inputs:normalmap_texture = @690555F727B815B1_normal.dds@
+                asset inputs:reflectionroughness_texture = @690555F727B815B1_rough.dds@
+            }
+        }
+
+        over "mat_58C0862CC7A2B0A1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @58C0862CC7A2B0A1_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @58C0862CC7A2B0A1_normal.dds@
+                asset inputs:reflectionroughness_texture = @58C0862CC7A2B0A1_rough.dds@
+            }
+        }
+
+        over "mat_AED1FB106F24EF87"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AED1FB106F24EF87_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @AED1FB106F24EF87_height.dds@
+                asset inputs:normalmap_texture = @AED1FB106F24EF87_normal.dds@
+                asset inputs:reflectionroughness_texture = @AED1FB106F24EF87_rough.dds@
+            }
+        }
+
+        over "mat_9AC0677FEBEABA20"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9AC0677FEBEABA20_albedo.dds@
+                asset inputs:normalmap_texture = @9AC0677FEBEABA20_normal.dds@
+                asset inputs:reflectionroughness_texture = @9AC0677FEBEABA20_rough.dds@
+            }
+        }
+
+        over "mat_30BE1E8F7213AEBD"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @30BE1E8F7213AEBD_albedo.dds@
+                asset inputs:metallic_texture = @30BE1E8F7213AEBD_metal.dds@
+                asset inputs:normalmap_texture = @30BE1E8F7213AEBD_normal.dds@
+                asset inputs:reflectionroughness_texture = @30BE1E8F7213AEBD_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_C32F39FF671A6D00"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @C32F39FF671A6D00_albedo.dds@
+                asset inputs:metallic_texture = @C32F39FF671A6D00_metal.dds@
+                asset inputs:normalmap_texture = @C32F39FF671A6D00_normal.dds@
+                asset inputs:reflectionroughness_texture = @C32F39FF671A6D00_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_C72CCD7FEF3F6AAF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C72CCD7FEF3F6AAF_albedo.dds@
+                asset inputs:normalmap_texture = @C72CCD7FEF3F6AAF_normal.dds@
+                asset inputs:reflectionroughness_texture = @C72CCD7FEF3F6AAF_rough.dds@
+            }
+        }
+
+        over "mat_D919599B7B75F54C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D919599B7B75F54C_albedo.dds@
+                asset inputs:normalmap_texture = @D919599B7B75F54C_normal.dds@
+                asset inputs:reflectionroughness_texture = @D919599B7B75F54C_rough.dds@
+            }
+        }
+
+        over "mat_8DE205040EBE8683"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8DE205040EBE8683_albedo.dds@
+                asset inputs:metallic_texture = @8DE205040EBE8683_metal.dds@
+                asset inputs:normalmap_texture = @8DE205040EBE8683_normal.dds@
+                asset inputs:reflectionroughness_texture = @8DE205040EBE8683_rough.dds@
+            }
+        }
+
+        over "mat_014457B22D619C6E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @014457B22D619C6E_albedo.dds@
+                asset inputs:metallic_texture = @014457B22D619C6E_metal.dds@
+                asset inputs:normalmap_texture = @014457B22D619C6E_normal.dds@
+                asset inputs:reflectionroughness_texture = @014457B22D619C6E_rough.dds@
+            }
+        }
+
+        over "mat_932E0F0E31417EAB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @932E0F0E31417EAB_albedo.dds@
+                asset inputs:metallic_texture = @932E0F0E31417EAB_metal.dds@
+                asset inputs:normalmap_texture = @932E0F0E31417EAB_normal.dds@
+                asset inputs:reflectionroughness_texture = @932E0F0E31417EAB_rough.dds@
+            }
+        }
+
+        over "mat_B3CC68B2DEB81001"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B3CC68B2DEB81001_albedo.dds@
+                asset inputs:metallic_texture = @B3CC68B2DEB81001_metal.dds@
+                asset inputs:normalmap_texture = @B3CC68B2DEB81001_normal.dds@
+                asset inputs:reflectionroughness_texture = @B3CC68B2DEB81001_rough.dds@
+            }
+        }
+
+        over "mat_C349DAC52EB14D16"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C349DAC52EB14D16_albedo.dds@
+                asset inputs:normalmap_texture = @C349DAC52EB14D16_normal.dds@
+                asset inputs:reflectionroughness_texture = @C349DAC52EB14D16_rough.dds@
+            }
+        }
+
+        over "mat_F062A62F9A7ADF2F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F062A62F9A7ADF2F_albedo.dds@
+                float inputs:displace_in = 0.01
+                asset inputs:height_texture = @F062A62F9A7ADF2F_height.dds@
+                asset inputs:metallic_texture = @F062A62F9A7ADF2F_metal.dds@
+                asset inputs:normalmap_texture = @F062A62F9A7ADF2F_normal.dds@
+                asset inputs:reflectionroughness_texture = @F062A62F9A7ADF2F_rough.dds@
+            }
+        }
+
+        over "mat_A761E89E631BA928"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A761E89E631BA928_albedo.dds@
+                asset inputs:metallic_texture = @A761E89E631BA928_metal.dds@
+                asset inputs:normalmap_texture = @A761E89E631BA928_normal.dds@
+                asset inputs:reflectionroughness_texture = @A761E89E631BA928_rough.dds@
+            }
+        }
+
+        over "mat_A10E05191D196274"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A10E05191D196274_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @A10E05191D196274_height.dds@
+                asset inputs:metallic_texture = @@
+                asset inputs:normalmap_texture = @A10E05191D196274_normal.dds@
+                asset inputs:reflectionroughness_texture = @A10E05191D196274_rough.dds@
+            }
+        }
+
+        over "mat_710F1CFCCB000C27"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @710F1CFCCB000C27_albedo.dds@
+                asset inputs:metallic_texture = @710F1CFCCB000C27_metal.dds@
+                asset inputs:normalmap_texture = @710F1CFCCB000C27_normal.dds@
+                asset inputs:reflectionroughness_texture = @710F1CFCCB000C27_rough.dds@
+            }
+        }
+
+        over "mat_94AE83B66945E9B2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @94AE83B66945E9B2_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @94AE83B66945E9B2_height.dds@
+                asset inputs:normalmap_texture = @94AE83B66945E9B2_normal.dds@
+                asset inputs:reflectionroughness_texture = @94AE83B66945E9B2_rough.dds@
+            }
+        }
+
+        over "mat_71CD08E664E69E3D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @71CD08E664E69E3D_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @71CD08E664E69E3D_height.dds@
+                asset inputs:normalmap_texture = @71CD08E664E69E3D_normal.dds@
+                asset inputs:reflectionroughness_texture = @71CD08E664E69E3D_rough.dds@
+            }
+        }
+
+        over "mat_A7222ADC9ECEFE96"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A7222ADC9ECEFE96_albedo.dds@
+                asset inputs:normalmap_texture = @A7222ADC9ECEFE96_normal.dds@
+                asset inputs:reflectionroughness_texture = @A7222ADC9ECEFE96_rough.dds@
+            }
+        }
+
+        over "mat_28D89B7B44C8913F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @28D89B7B44C8913F_albedo.dds@
+                asset inputs:normalmap_texture = @28D89B7B44C8913F_normal.dds@
+                asset inputs:reflectionroughness_texture = @28D89B7B44C8913F_rough.dds@
+            }
+        }
+
+        over "mat_A9E318D02F433A9F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A9E318D02F433A9F_albedo.dds@
+                asset inputs:metallic_texture = @A9E318D02F433A9F_metal.dds@
+                asset inputs:normalmap_texture = @A9E318D02F433A9F_normal.dds@
+                asset inputs:reflectionroughness_texture = @A9E318D02F433A9F_rough.dds@
+            }
+        }
+
+        over "mat_3B946F2DC2ABB86C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3B946F2DC2ABB86C_albedo.dds@
+                asset inputs:metallic_texture = @3B946F2DC2ABB86C_metal.dds@
+                asset inputs:normalmap_texture = @3B946F2DC2ABB86C_normal.dds@
+                asset inputs:reflectionroughness_texture = @3B946F2DC2ABB86C_rough.dds@
+            }
+        }
+
+        over "mat_3D9571E85266D9F7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3D9571E85266D9F7_albedo.dds@
+                asset inputs:metallic_texture = @3D9571E85266D9F7_metal.dds@
+                asset inputs:normalmap_texture = @3D9571E85266D9F7_normal.dds@
+                asset inputs:reflectionroughness_texture = @3D9571E85266D9F7_rough.dds@
+            }
+        }
+
+        over "mat_07C29139D13A51D6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @07C29139D13A51D6_albedo.dds@
+                asset inputs:normalmap_texture = @07C29139D13A51D6_normal.dds@
+                asset inputs:reflectionroughness_texture = @07C29139D13A51D6_rough.dds@
+            }
+        }
+
+        over "mat_755107B0E345CDA7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @755107B0E345CDA7_albedo.dds@
+                asset inputs:normalmap_texture = @755107B0E345CDA7_normal.dds@
+                asset inputs:reflectionroughness_texture = @755107B0E345CDA7_rough.dds@
+            }
+        }
+
+        over "mat_1AFC7184D4BECA03"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1AFC7184D4BECA03_albedo.dds@
+                asset inputs:normalmap_texture = @1AFC7184D4BECA03_normal.dds@
+                asset inputs:reflectionroughness_texture = @1AFC7184D4BECA03_rough.dds@
+            }
+        }
+
+        over "mat_7570EF2BABE26496"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7570EF2BABE26496_albedo.dds@
+                asset inputs:normalmap_texture = @7570EF2BABE26496_normal.dds@
+                asset inputs:reflectionroughness_texture = @7570EF2BABE26496_rough.dds@
+            }
+        }
+
+        over "mat_1346275B44B1E998"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1346275B44B1E998_albedo.dds@
+                asset inputs:normalmap_texture = @1346275B44B1E998_normal.dds@
+                asset inputs:reflectionroughness_texture = @1346275B44B1E998_rough.dds@
+            }
+        }
+
+        over "mat_B363ACF2370EC673"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B363ACF2370EC673_albedo.dds@
+                asset inputs:normalmap_texture = @B363ACF2370EC673_normal.dds@
+                asset inputs:reflectionroughness_texture = @B363ACF2370EC673_rough.dds@
+            }
+        }
+
+        over "mat_1221CFBF7BBF6B58"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1221CFBF7BBF6B58_albedo.dds@
+                asset inputs:metallic_texture = @1221CFBF7BBF6B58_metal.dds@
+                asset inputs:normalmap_texture = @1221CFBF7BBF6B58_normal.dds@
+                asset inputs:reflectionroughness_texture = @1221CFBF7BBF6B58_rough.dds@
+            }
+        }
+
+        over "mat_1E7BCB02B659B3D4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1E7BCB02B659B3D4_albedo.dds@
+                asset inputs:metallic_texture = @1E7BCB02B659B3D4_metal.dds@
+                asset inputs:normalmap_texture = @1E7BCB02B659B3D4_normal.dds@
+                asset inputs:reflectionroughness_texture = @1E7BCB02B659B3D4_rough.dds@
+            }
+        }
+
+        over "mat_EBFF50A4C297A648"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @EBFF50A4C297A648_albedo.dds@
+                asset inputs:metallic_texture = @EBFF50A4C297A648_metal.dds@
+                asset inputs:normalmap_texture = @EBFF50A4C297A648_normal.dds@
+                asset inputs:reflectionroughness_texture = @EBFF50A4C297A648_rough.dds@
+            }
+        }
+
+        over "mat_9029041A3DD59D1C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9029041A3DD59D1C_albedo.dds@
+                asset inputs:metallic_texture = @9029041A3DD59D1C_metal.dds@
+                asset inputs:normalmap_texture = @9029041A3DD59D1C_normal.dds@
+                asset inputs:reflectionroughness_texture = @9029041A3DD59D1C_rough.dds@
+            }
+        }
+
+        over "mat_39933F6886A3BC97"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @39933F6886A3BC97_albedo.dds@
+                asset inputs:metallic_texture = @39933F6886A3BC97_metal.dds@
+                asset inputs:normalmap_texture = @39933F6886A3BC97_normal.dds@
+                asset inputs:reflectionroughness_texture = @39933F6886A3BC97_rough.dds@
+            }
+        }
+
+        over "mat_9E772327BB938934"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9E772327BB938934_albedo.dds@
+                asset inputs:normalmap_texture = @9E772327BB938934_normal.dds@
+                asset inputs:reflectionroughness_texture = @9E772327BB938934_rough.dds@
+            }
+        }
+
+        over "mat_45DBF923157A08EC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @45DBF923157A08EC_albedo.dds@
+                asset inputs:metallic_texture = @45DBF923157A08EC_metal.dds@
+                asset inputs:normalmap_texture = @45DBF923157A08EC_normal.dds@
+                asset inputs:reflectionroughness_texture = @45DBF923157A08EC_rough.dds@
+            }
+        }
+
+        over "mat_C87D5E893399B1A0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C87D5E893399B1A0_albedo.dds@
+                asset inputs:metallic_texture = @C87D5E893399B1A0_metal.dds@
+                asset inputs:normalmap_texture = @C87D5E893399B1A0_normal.dds@
+                asset inputs:reflectionroughness_texture = @C87D5E893399B1A0_rough.dds@
+            }
+        }
+
+        over "mat_FF96926376A1A075"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0.79999995
+                float inputs:reflection_roughness_constant = 0.099999994
+            }
+        }
+
+        over "mat_40AC2281F997E9E9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @40AC2281F997E9E9_albedo.dds@
+                asset inputs:normalmap_texture = @40AC2281F997E9E9_normal.dds@
+                asset inputs:reflectionroughness_texture = @40AC2281F997E9E9_rough.dds@
+            }
+        }
+
+        over "mat_2FB241C4C23E0A83"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2FB241C4C23E0A83_albedo.dds@
+                asset inputs:normalmap_texture = @2FB241C4C23E0A83_normal.dds@
+                asset inputs:reflectionroughness_texture = @2FB241C4C23E0A83_rough.dds@
+            }
+        }
+
+        over "mat_E96B7E9461498F65"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E96B7E9461498F65_albedo.dds@
+                asset inputs:normalmap_texture = @E96B7E9461498F65_normal.dds@
+                asset inputs:reflectionroughness_texture = @E96B7E9461498F65_rough.dds@
+            }
+        }
+
+        over "mat_819084797154B814"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @819084797154B814_albedo.dds@
+                asset inputs:normalmap_texture = @819084797154B814_normal.dds@
+                asset inputs:reflectionroughness_texture = @819084797154B814_rough.dds@
+            }
+        }
+
+        over "mat_79ECE47C3E7B8BC0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @79ECE47C3E7B8BC0_albedo.dds@
+                asset inputs:normalmap_texture = @79ECE47C3E7B8BC0_normal.dds@
+                asset inputs:reflectionroughness_texture = @79ECE47C3E7B8BC0_rough.dds@
+            }
+        }
+
+        over "mat_ED09F73E10593729"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @ED09F73E10593729_albedo.dds@
+                asset inputs:normalmap_texture = @ED09F73E10593729_normal.dds@
+                asset inputs:reflectionroughness_texture = @ED09F73E10593729_rough.dds@
+            }
+        }
+
+        over "mat_926824CD92B1B6BF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @926824CD92B1B6BF_albedo.dds@
+                asset inputs:normalmap_texture = @926824CD92B1B6BF_normal.dds@
+                asset inputs:reflectionroughness_texture = @926824CD92B1B6BF_rough.dds@
+            }
+        }
+
+        over "mat_05CF00535AB85D55"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @05CF00535AB85D55_albedo.dds@
+                asset inputs:normalmap_texture = @05CF00535AB85D55_normal.dds@
+                asset inputs:reflectionroughness_texture = @05CF00535AB85D55_rough.dds@
+            }
+        }
+
+        over "mat_1E917D7B20D9D299"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1E917D7B20D9D299_albedo.dds@
+                asset inputs:normalmap_texture = @1E917D7B20D9D299_normal.dds@
+                asset inputs:reflectionroughness_texture = @1E917D7B20D9D299_rough.dds@
+            }
+        }
+
+        over "mat_CD5DF8E1641896E3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CD5DF8E1641896E3_albedo.dds@
+                asset inputs:normalmap_texture = @CD5DF8E1641896E3_normal.dds@
+                asset inputs:reflectionroughness_texture = @CD5DF8E1641896E3_rough.dds@
+            }
+        }
+
+        over "mat_3283046ED717B0B3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3283046ED717B0B3_albedo.dds@
+                asset inputs:normalmap_texture = @3283046ED717B0B3_normal.dds@
+                asset inputs:reflectionroughness_texture = @3283046ED717B0B3_rough.dds@
+            }
+        }
+
+        over "mat_13192AC62B816889"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @13192AC62B816889_albedo.dds@
+                asset inputs:normalmap_texture = @13192AC62B816889_normal.dds@
+                asset inputs:reflectionroughness_texture = @13192AC62B816889_rough.dds@
+            }
+        }
+
+        over "mat_BBDA2558C8261855"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BBDA2558C8261855_albedo.dds@
+                asset inputs:normalmap_texture = @BBDA2558C8261855_normal.dds@
+                asset inputs:reflectionroughness_texture = @BBDA2558C8261855_rough.dds@
+            }
+        }
+
+        over "mat_36174BE855DC6EDF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @36174BE855DC6EDF_albedo.dds@
+                asset inputs:normalmap_texture = @36174BE855DC6EDF_normal.dds@
+                asset inputs:reflectionroughness_texture = @36174BE855DC6EDF_rough.dds@
+            }
+        }
+
+        over "mat_AADBCCE7E55B0A46"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AADBCCE7E55B0A46_albedo.dds@
+                asset inputs:normalmap_texture = @AADBCCE7E55B0A46_normal.dds@
+                asset inputs:reflectionroughness_texture = @AADBCCE7E55B0A46_rough.dds@
+            }
+        }
+
+        over "mat_BAA9575D5BC145C7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BAA9575D5BC145C7_albedo.dds@
+                asset inputs:normalmap_texture = @BAA9575D5BC145C7_normal.dds@
+                asset inputs:reflectionroughness_texture = @BAA9575D5BC145C7_rough.dds@
+            }
+        }
+
+        over "mat_3E90507993270728"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3E90507993270728_albedo.dds@
+                asset inputs:metallic_texture = @3E90507993270728_metal.dds@
+                asset inputs:normalmap_texture = @3E90507993270728_normal.dds@
+                asset inputs:reflectionroughness_texture = @3E90507993270728_rough.dds@
+            }
+        }
+
+        over "mat_800273E936A42109"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @800273E936A42109_albedo.dds@
+                asset inputs:normalmap_texture = @800273E936A42109_normal.dds@
+                asset inputs:reflectionroughness_texture = @800273E936A42109_rough.dds@
+            }
+        }
+
+        over "mat_63594988E29F2780"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @63594988E29F2780_albedo.dds@
+                asset inputs:normalmap_texture = @63594988E29F2780_normal.dds@
+                asset inputs:reflectionroughness_texture = @63594988E29F2780_rough.dds@
+            }
+        }
+
+        over "mat_09E21E31567107AA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @09E21E31567107AA_albedo.dds@
+                asset inputs:metallic_texture = @09E21E31567107AA_metal.dds@
+                asset inputs:normalmap_texture = @09E21E31567107AA_normal.dds@
+                asset inputs:reflectionroughness_texture = @09E21E31567107AA_rough.dds@
+            }
+        }
+
+        over "mat_5D9A3E274E30BE90"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5D9A3E274E30BE90_albedo.dds@
+                asset inputs:normalmap_texture = @5D9A3E274E30BE90_normal.dds@
+                asset inputs:reflectionroughness_texture = @5D9A3E274E30BE90_rough.dds@
+            }
+        }
+
+        over "mat_1E96675FA7B72C71"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1E96675FA7B72C71_albedo.dds@
+                asset inputs:normalmap_texture = @1E96675FA7B72C71_normal.dds@
+                asset inputs:reflectionroughness_texture = @1E96675FA7B72C71_rough.dds@
+            }
+        }
+
+        over "mat_8F290F80B39A5A0F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8F290F80B39A5A0F_albedo.dds@
+                asset inputs:normalmap_texture = @8F290F80B39A5A0F_normal.dds@
+                asset inputs:reflectionroughness_texture = @8F290F80B39A5A0F_rough.dds@
+            }
+        }
+
+        over "mat_FA186055B0548BDD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @FA186055B0548BDD_albedo.dds@
+                asset inputs:normalmap_texture = @FA186055B0548BDD_normal.dds@
+                asset inputs:reflectionroughness_texture = @FA186055B0548BDD_rough.dds@
+            }
+        }
+
+        over "mat_28DB34018B6A882B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @28DB34018B6A882B_albedo.dds@
+                asset inputs:normalmap_texture = @28DB34018B6A882B_normal.dds@
+                asset inputs:reflectionroughness_texture = @28DB34018B6A882B_rough.dds@
+            }
+        }
+
+        over "mat_42B6D84540580BDF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @42B6D84540580BDF_albedo.dds@
+                asset inputs:normalmap_texture = @42B6D84540580BDF_normal.dds@
+                asset inputs:reflectionroughness_texture = @42B6D84540580BDF_rough.dds@
+            }
+        }
+
+        over "mat_CFA77ADC5804AFD4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CFA77ADC5804AFD4_albedo.dds@
+                asset inputs:normalmap_texture = @CFA77ADC5804AFD4_normal.dds@
+                asset inputs:reflectionroughness_texture = @CFA77ADC5804AFD4_rough.dds@
+            }
+        }
+
+        over "mat_D53B20D8D7969A52"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D53B20D8D7969A52_albedo.dds@
+                asset inputs:normalmap_texture = @D53B20D8D7969A52_normal.dds@
+                asset inputs:reflectionroughness_texture = @D53B20D8D7969A52_rough.dds@
+            }
+        }
+
+        over "mat_E2A71054D70CED2B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E2A71054D70CED2B_albedo.dds@
+                asset inputs:normalmap_texture = @E2A71054D70CED2B_normal.dds@
+                asset inputs:reflectionroughness_texture = @E2A71054D70CED2B_rough.dds@
+            }
+        }
+
+        over "mat_9458A35A3CCA8187"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9458A35A3CCA8187_albedo.dds@
+                asset inputs:normalmap_texture = @9458A35A3CCA8187_normal.dds@
+                asset inputs:reflectionroughness_texture = @9458A35A3CCA8187_rough.dds@
+            }
+        }
+
+        over "mat_8C9FE3B60E951575"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8C9FE3B60E951575_albedo.dds@
+                asset inputs:normalmap_texture = @8C9FE3B60E951575_normal.dds@
+                asset inputs:reflectionroughness_texture = @8C9FE3B60E951575_rough.dds@
+            }
+        }
+
+        over "mat_21705151D5BD7341"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @21705151D5BD7341_albedo.dds@
+                asset inputs:normalmap_texture = @21705151D5BD7341_normal.dds@
+                asset inputs:reflectionroughness_texture = @21705151D5BD7341_rough.dds@
+            }
+        }
+
+        over "mat_4A4EF1A446A057F5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4A4EF1A446A057F5_albedo.dds@
+                asset inputs:metallic_texture = @4A4EF1A446A057F5_metal.dds@
+                asset inputs:normalmap_texture = @4A4EF1A446A057F5_normal.dds@
+                asset inputs:reflectionroughness_texture = @4A4EF1A446A057F5_rough.dds@
+            }
+        }
+
+        over "mat_C7C4CE29B78E100E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C7C4CE29B78E100E_albedo.dds@
+                asset inputs:normalmap_texture = @C7C4CE29B78E100E_normal.dds@
+                asset inputs:reflectionroughness_texture = @C7C4CE29B78E100E_rough.dds@
+            }
+        }
+
+        over "mat_4F16AB0BB64EFF4C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4F16AB0BB64EFF4C_albedo.dds@
+                asset inputs:normalmap_texture = @4F16AB0BB64EFF4C_normal.dds@
+                asset inputs:reflectionroughness_texture = @4F16AB0BB64EFF4C_rough.dds@
+            }
+        }
+
+        over "mat_579F8CF9591FCEB9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @579F8CF9591FCEB9_albedo.dds@
+                asset inputs:normalmap_texture = @579F8CF9591FCEB9_normal.dds@
+                asset inputs:reflectionroughness_texture = @579F8CF9591FCEB9_rough.dds@
+            }
+        }
+
+        over "mat_ED556CBD94D645B7"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @ED556CBD94D645B7_albedo.dds@
+                asset inputs:normalmap_texture = @ED556CBD94D645B7_normal.dds@
+                asset inputs:reflectionroughness_texture = @ED556CBD94D645B7_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_3A6DB9B4F6AFD0BF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3A6DB9B4F6AFD0BF_albedo.dds@
+                asset inputs:normalmap_texture = @3A6DB9B4F6AFD0BF_normal.dds@
+                asset inputs:reflectionroughness_texture = @3A6DB9B4F6AFD0BF_rough.dds@
+            }
+        }
+
+        over "mat_7602E2D9B89C06B0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7602E2D9B89C06B0_albedo.dds@
+                asset inputs:normalmap_texture = @7602E2D9B89C06B0_normal.dds@
+                asset inputs:reflectionroughness_texture = @7602E2D9B89C06B0_rough.dds@
+            }
+        }
+
+        over "mat_EFB6FED63F9CD467"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @EFB6FED63F9CD467_albedo.dds@
+                asset inputs:normalmap_texture = @EFB6FED63F9CD467_normal.dds@
+                asset inputs:reflectionroughness_texture = @EFB6FED63F9CD467_rough.dds@
+            }
+        }
+
+        over "mat_6326A2F3D4452050"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6326A2F3D4452050_albedo.dds@
+                asset inputs:normalmap_texture = @6326A2F3D4452050_normal.dds@
+                asset inputs:reflectionroughness_texture = @6326A2F3D4452050_rough.dds@
+            }
+        }
+
+        over "mat_62F871761168F57C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @62F871761168F57C_albedo.dds@
+                asset inputs:normalmap_texture = @62F871761168F57C_normal.dds@
+                asset inputs:reflectionroughness_texture = @62F871761168F57C_rough.dds@
+            }
+        }
+
+        over "mat_093DCC1708849B22"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @093DCC1708849B22_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @093DCC1708849B22_height.dds@
+                asset inputs:normalmap_texture = @093DCC1708849B22_normal.dds@
+                asset inputs:reflectionroughness_texture = @093DCC1708849B22_rough.dds@
+            }
+        }
+
+        over "mat_CBC0376CB71AF411"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CBC0376CB71AF411_albedo.dds@
+                asset inputs:normalmap_texture = @CBC0376CB71AF411_normal.dds@
+                asset inputs:reflectionroughness_texture = @CBC0376CB71AF411_rough.dds@
+            }
+        }
+
+        over "mat_7CDE4050AFC534EC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7CDE4050AFC534EC_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @7CDE4050AFC534EC_height.dds@
+                asset inputs:normalmap_texture = @7CDE4050AFC534EC_normal.dds@
+                asset inputs:reflectionroughness_texture = @7CDE4050AFC534EC_rough.dds@
+            }
+        }
+
+        over "mat_C015B2BDE45B0F69"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C015B2BDE45B0F69_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @C015B2BDE45B0F69_height.dds@
+                asset inputs:normalmap_texture = @C015B2BDE45B0F69_normal.dds@
+                asset inputs:reflectionroughness_texture = @C015B2BDE45B0F69_rough.dds@
+            }
+        }
+
+        over "mat_896205E58F1B1D41"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @896205E58F1B1D41_albedo.dds@
+                float inputs:metallic_constant = 0.39999998
+                asset inputs:normalmap_texture = @896205E58F1B1D41_normal.dds@
+                asset inputs:reflectionroughness_texture = @896205E58F1B1D41_rough.dds@
+            }
+        }
+
+        over "mat_5F309934320FCA72"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5F309934320FCA72_albedo.dds@
+                asset inputs:normalmap_texture = @5F309934320FCA72_normal.dds@
+                asset inputs:reflectionroughness_texture = @5F309934320FCA72_rough.dds@
+            }
+        }
+
+        over "mat_CBC172462723BD98"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CBC172462723BD98_albedo.dds@
+                asset inputs:normalmap_texture = @CBC172462723BD98_normal.dds@
+                asset inputs:reflectionroughness_texture = @CBC172462723BD98_rough.dds@
+            }
+        }
+
+        over "mat_A1ADBDD6A4A300D4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A1ADBDD6A4A300D4_albedo.dds@
+                asset inputs:normalmap_texture = @A1ADBDD6A4A300D4_normal.dds@
+                asset inputs:reflectionroughness_texture = @A1ADBDD6A4A300D4_rough.dds@
+            }
+        }
+
+        over "mat_46F64005662681E0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @46F64005662681E0_albedo.dds@
+                asset inputs:normalmap_texture = @46F64005662681E0_normal.dds@
+                asset inputs:reflectionroughness_texture = @46F64005662681E0_rough.dds@
+            }
+        }
+
+        over "mat_80B97EB7D58B280E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @80B97EB7D58B280E_albedo.dds@
+                asset inputs:normalmap_texture = @80B97EB7D58B280E_normal.dds@
+                asset inputs:reflectionroughness_texture = @80B97EB7D58B280E_rough.dds@
+            }
+        }
+
+        over "mat_1291CEE22FCA65C1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1291CEE22FCA65C1_albedo.dds@
+                asset inputs:normalmap_texture = @1291CEE22FCA65C1_normal.dds@
+                asset inputs:reflectionroughness_texture = @1291CEE22FCA65C1_rough.dds@
+            }
+        }
+
+        over "mat_626CB6686BF1FFA1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @626CB6686BF1FFA1_albedo.dds@
+                asset inputs:normalmap_texture = @626CB6686BF1FFA1_normal.dds@
+                asset inputs:reflectionroughness_texture = @626CB6686BF1FFA1_rough.dds@
+            }
+        }
+
+        over "mat_7B78F2EF0125A03A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7B78F2EF0125A03A_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @7B78F2EF0125A03A_height.dds@
+                asset inputs:normalmap_texture = @7B78F2EF0125A03A_normal.dds@
+                asset inputs:reflectionroughness_texture = @7B78F2EF0125A03A_rough.dds@
+            }
+        }
+
+        over "mat_03BB901FE95DC48B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @03BB901FE95DC48B_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @03BB901FE95DC48B_height.dds@
+                asset inputs:normalmap_texture = @03BB901FE95DC48B_normal.dds@
+                asset inputs:reflectionroughness_texture = @03BB901FE95DC48B_rough.dds@
+            }
+        }
+
+        over "mat_2D1F58B7845DFA80"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2D1F58B7845DFA80_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @2D1F58B7845DFA80_height.dds@
+                asset inputs:normalmap_texture = @2D1F58B7845DFA80_normal.dds@
+                asset inputs:reflectionroughness_texture = @2D1F58B7845DFA80_rough.dds@
+            }
+        }
+
+        over "mat_6AE6831D9EB800E7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6AE6831D9EB800E7_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @6AE6831D9EB800E7_height.dds@
+                asset inputs:normalmap_texture = @6AE6831D9EB800E7_normal.dds@
+                asset inputs:reflectionroughness_texture = @6AE6831D9EB800E7_rough.dds@
+            }
+        }
+
+        over "mat_932BD762B047A75D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @932BD762B047A75D_albedo.dds@
+                asset inputs:metallic_texture = @932BD762B047A75D_metal.dds@
+                asset inputs:normalmap_texture = @932BD762B047A75D_normal.dds@
+                asset inputs:reflectionroughness_texture = @932BD762B047A75D_rough.dds@
+            }
+        }
+
+        over "mat_BE8394354365A9FF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BE8394354365A9FF_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @BE8394354365A9FF_height.dds@
+                asset inputs:normalmap_texture = @BE8394354365A9FF_normal.dds@
+                asset inputs:reflectionroughness_texture = @BE8394354365A9FF_rough.dds@
+            }
+        }
+
+        over "mat_91902D522AF4C78C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @91902D522AF4C78C_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @91902D522AF4C78C_height.dds@
+                asset inputs:normalmap_texture = @91902D522AF4C78C_normal.dds@
+                asset inputs:reflectionroughness_texture = @91902D522AF4C78C_rough.dds@
+            }
+        }
+
+        over "mat_ED8D22E3C44D9135"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @ED8D22E3C44D9135_albedo.dds@
+                asset inputs:metallic_texture = @ED8D22E3C44D9135_metal.dds@
+                asset inputs:normalmap_texture = @ED8D22E3C44D9135_normal.dds@
+                asset inputs:reflectionroughness_texture = @ED8D22E3C44D9135_rough.dds@
+            }
+        }
+
+        over "mat_630FC69BE5D98670"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @630FC69BE5D98670_albedo.dds@
+                asset inputs:metallic_texture = @630FC69BE5D98670_metal.dds@
+                asset inputs:normalmap_texture = @630FC69BE5D98670_normal.dds@
+                asset inputs:reflectionroughness_texture = @630FC69BE5D98670_rough.dds@
+            }
+        }
+
+        over "mat_571289D0663B3DA0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @571289D0663B3DA0_albedo.dds@
+                asset inputs:metallic_texture = @571289D0663B3DA0_metal.dds@
+                asset inputs:normalmap_texture = @571289D0663B3DA0_normal.dds@
+                asset inputs:reflectionroughness_texture = @571289D0663B3DA0_rough.dds@
+            }
+        }
+
+        over "mat_60990101CF42BC63"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @60990101CF42BC63_albedo.dds@
+                asset inputs:normalmap_texture = @60990101CF42BC63_normal.dds@
+                asset inputs:reflectionroughness_texture = @60990101CF42BC63_rough.dds@
+            }
+        }
+
+        over "mat_14DEAFE61A4AE89D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @14DEAFE61A4AE89D_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @14DEAFE61A4AE89D_height.dds@
+                asset inputs:metallic_texture = @14DEAFE61A4AE89D_metal.dds@
+                asset inputs:normalmap_texture = @14DEAFE61A4AE89D_normal.dds@
+                asset inputs:reflectionroughness_texture = @14DEAFE61A4AE89D_rough.dds@
+            }
+        }
+
+        over "mat_138351966CAC210A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @138351966CAC210A_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @138351966CAC210A_height.dds@
+                asset inputs:metallic_texture = @138351966CAC210A_metal.dds@
+                asset inputs:normalmap_texture = @138351966CAC210A_normal.dds@
+                asset inputs:reflectionroughness_texture = @138351966CAC210A_rough.dds@
+            }
+        }
+
+        over "mat_3FE2A2F3CFF38C9D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3FE2A2F3CFF38C9D_albedo.dds@
+                asset inputs:normalmap_texture = @3FE2A2F3CFF38C9D_normal.dds@
+                asset inputs:reflectionroughness_texture = @3FE2A2F3CFF38C9D_rough.dds@
+            }
+        }
+
+        over "mat_A40C731039052325"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @A40C731039052325_albedo.dds@
+                bool inputs:inverted_blend = 0
+                asset inputs:normalmap_texture = @A40C731039052325_normal.dds@
+                asset inputs:reflectionroughness_texture = @A40C731039052325_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_AF4C166E69995EEF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AF4C166E69995EEF_albedo.dds@
+                asset inputs:normalmap_texture = @AF4C166E69995EEF_normal.dds@
+                asset inputs:reflectionroughness_texture = @AF4C166E69995EEF_rough.dds@
+            }
+        }
+
+        over "mat_4EE056C9257D88A4"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @4EE056C9257D88A4_albedo.dds@
+                asset inputs:normalmap_texture = @4EE056C9257D88A4_normal.dds@
+                asset inputs:reflectionroughness_texture = @4EE056C9257D88A4_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_5B05EAC5D1B7B67C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5B05EAC5D1B7B67C_albedo.dds@
+                asset inputs:normalmap_texture = @5B05EAC5D1B7B67C_normal.dds@
+                asset inputs:reflectionroughness_texture = @5B05EAC5D1B7B67C_rough.dds@
+            }
+        }
+
+        over "mat_E3C64C078C218BC9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E3C64C078C218BC9_albedo.dds@
+                asset inputs:normalmap_texture = @E3C64C078C218BC9_normal.dds@
+                asset inputs:reflectionroughness_texture = @E3C64C078C218BC9_rough.dds@
+            }
+        }
+
+        over "mat_0CEF747BE06FF85B"
+        {
+            uniform token ui:nodegraph:node:expansionState = "open"
+
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @0CEF747BE06FF85B_albedo.dds@
+                asset inputs:normalmap_texture = @0CEF747BE06FF85B_normal.dds@
+                asset inputs:reflectionroughness_texture = @0CEF747BE06FF85B_rough.dds@
+                uniform token ui:nodegraph:node:expansionState = "open"
+            }
+        }
+
+        over "mat_B64767A4D071DE4B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B64767A4D071DE4B_albedo.dds@
+                asset inputs:normalmap_texture = @B64767A4D071DE4B_normal.dds@
+                asset inputs:reflectionroughness_texture = @B64767A4D071DE4B_rough.dds@
+            }
+        }
+
+        over "mat_CE9098027141A554"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CE9098027141A554_albedo.dds@
+                asset inputs:normalmap_texture = @CE9098027141A554_normal.dds@
+                asset inputs:reflectionroughness_texture = @CE9098027141A554_rough.dds@
+            }
+        }
+
+        over "mat_3D6EDEB79B1715D6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3D6EDEB79B1715D6_albedo.dds@
+                asset inputs:metallic_texture = @3D6EDEB79B1715D6_metal.dds@
+                asset inputs:normalmap_texture = @3D6EDEB79B1715D6_normal.dds@
+                asset inputs:reflectionroughness_texture = @3D6EDEB79B1715D6_rough.dds@
+            }
+        }
+
+        over "mat_6F0A9B9730DB03FC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6F0A9B9730DB03FC_albedo.dds@
+                asset inputs:metallic_texture = @6F0A9B9730DB03FC_metal.dds@
+                asset inputs:normalmap_texture = @6F0A9B9730DB03FC_normal.dds@
+                asset inputs:reflectionroughness_texture = @6F0A9B9730DB03FC_rough.dds@
+            }
+        }
+
+        over "mat_861576DDFBA87A22"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @861576DDFBA87A22_albedo.dds@
+                asset inputs:normalmap_texture = @861576DDFBA87A22_normal.dds@
+                asset inputs:reflectionroughness_texture = @861576DDFBA87A22_rough.dds@
+            }
+        }
+
+        over "mat_E32D4A8D3B22BB96"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E32D4A8D3B22BB96_albedo.dds@
+                asset inputs:normalmap_texture = @E32D4A8D3B22BB96_normal.dds@
+                asset inputs:reflectionroughness_texture = @E32D4A8D3B22BB96_rough.dds@
+            }
+        }
+
+        over "mat_8F973DB7EA9CA82A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8F973DB7EA9CA82A_albedo.dds@
+                asset inputs:normalmap_texture = @8F290F80B39A5A0F_normal.dds@
+                asset inputs:reflectionroughness_texture = @8F973DB7EA9CA82A_rough.dds@
+            }
+        }
+
+        over "mat_953E8033C0D2D696"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @953E8033C0D2D696_albedo.dds@
+                asset inputs:normalmap_texture = @953E8033C0D2D696_normal.dds@
+                asset inputs:reflectionroughness_texture = @953E8033C0D2D696_rough.dds@
+            }
+        }
+
+        over "mat_C2ECDA9C125C7D0C"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @C2ECDA9C125C7D0C_albedo.dds@
+                asset inputs:normalmap_texture = @C2ECDA9C125C7D0C_normal.dds@
+                asset inputs:reflectionroughness_texture = @C2ECDA9C125C7D0C_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_A7B2434DC8A8CBED"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A7B2434DC8A8CBED_albedo.dds@
+                asset inputs:normalmap_texture = @A7B2434DC8A8CBED_normal.dds@
+                asset inputs:reflectionroughness_texture = @A7B2434DC8A8CBED_rough.dds@
+            }
+        }
+
+        over "mat_06B9EBA0DA6D20A1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @06B9EBA0DA6D20A1_albedo.dds@
+                asset inputs:normalmap_texture = @06B9EBA0DA6D20A1_normal.dds@
+                asset inputs:reflectionroughness_texture = @06B9EBA0DA6D20A1_rough.dds@
+            }
+        }
+
+        over "mat_35BA45961B8F831E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @35BA45961B8F831E_albedo.dds@
+                asset inputs:normalmap_texture = @35BA45961B8F831E_normal.dds@
+                asset inputs:reflectionroughness_texture = @35BA45961B8F831E_rough.dds@
+            }
+        }
+
+        over "mat_BADF1ACF1C53CBEF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BADF1ACF1C53CBEF_albedo.dds@
+                asset inputs:normalmap_texture = @BADF1ACF1C53CBEF_normal.dds@
+                asset inputs:reflectionroughness_texture = @BADF1ACF1C53CBEF_rough.dds@
+            }
+        }
+
+        over "mat_16C399A9172D571C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @16C399A9172D571C_albedo.dds@
+                asset inputs:normalmap_texture = @16C399A9172D571C_normal.dds@
+                asset inputs:reflectionroughness_texture = @16C399A9172D571C_rough.dds@
+            }
+        }
+
+        over "mat_12A8B18DFB4F1D0D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @12A8B18DFB4F1D0D_albedo.dds@
+                asset inputs:normalmap_texture = @12A8B18DFB4F1D0D_normal.dds@
+                asset inputs:reflectionroughness_texture = @12A8B18DFB4F1D0D_rough.dds@
+            }
+        }
+
+        over "mat_FF15DB596D6A64CC"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @FF15DB596D6A64CC_albedo.dds@
+                asset inputs:normalmap_texture = @FD961BFE5C861D2D_normal.dds@
+                asset inputs:reflectionroughness_texture = @FF15DB596D6A64CC_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_352FF9E7CD7BE828"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @352FF9E7CD7BE828_albedo.dds@
+                asset inputs:normalmap_texture = @352FF9E7CD7BE828_normal.dds@
+                asset inputs:reflectionroughness_texture = @352FF9E7CD7BE828_rough.dds@
+            }
+        }
+
+        over "mat_173B99BD42BF32CD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @173B99BD42BF32CD_albedo.dds@
+                asset inputs:normalmap_texture = @173B99BD42BF32CD_normal.dds@
+                asset inputs:reflectionroughness_texture = @173B99BD42BF32CD_rough.dds@
+            }
+        }
+
+        over "mat_56CD6C17C9A85BC5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @56CD6C17C9A85BC5_albedo.dds@
+                asset inputs:normalmap_texture = @56CD6C17C9A85BC5_normal.dds@
+                asset inputs:reflectionroughness_texture = @56CD6C17C9A85BC5_rough.dds@
+            }
+        }
+
+        over "mat_1E9699087034DBB5"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                asset inputs:diffuse_texture = @1E9699087034DBB5_albedo.dds@
+                asset inputs:normalmap_texture = @1E9699087034DBB5_normal.dds@
+                asset inputs:reflectionroughness_texture = @1E9699087034DBB5_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_7426C7B833559CAF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7426C7B833559CAF_albedo.dds@
+                float inputs:metallic_constant = 0.59999996
+                asset inputs:normalmap_texture = @7426C7B833559CAF_normal.dds@
+                asset inputs:reflectionroughness_texture = @7426C7B833559CAF_rough.dds@
+            }
+        }
+
+        over "mat_3B39832206280628"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3B39832206280628_albedo.dds@
+                asset inputs:normalmap_texture = @3B39832206280628_normal.dds@
+                asset inputs:reflectionroughness_texture = @3B39832206280628_rough.dds@
+            }
+        }
+
+        over "mat_429CC20114B87251"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @429CC20114B87251_albedo.dds@
+                float inputs:metallic_constant = 0.19999999
+                asset inputs:normalmap_texture = @Ballon_normal.dds@
+                float inputs:reflection_roughness_constant = 0.049999997
+            }
+        }
+
+        over "mat_6242E7A5E9B2FBC1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6242E7A5E9B2FBC1_albedo.dds@
+                asset inputs:normalmap_texture = @6242E7A5E9B2FBC1_normal.dds@
+                asset inputs:reflectionroughness_texture = @6242E7A5E9B2FBC1_rough.dds@
+            }
+        }
+
+        over "mat_10FB8DB7F365BE8C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @10FB8DB7F365BE8C_albedo.dds@
+                asset inputs:metallic_texture = @10FB8DB7F365BE8C_metal.dds@
+                asset inputs:normalmap_texture = @10FB8DB7F365BE8C_normal.dds@
+                asset inputs:reflectionroughness_texture = @10FB8DB7F365BE8C_rough.dds@
+            }
+        }
+
+        over "mat_77471B20F68AE160"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 0
+                int inputs:blend_type = 0
+                bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_62DA3192FC6E0D58"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @62DA3192FC6E0D58_albedo.dds@
+                asset inputs:normalmap_texture = @62DA3192FC6E0D58_normal.dds@
+                asset inputs:reflectionroughness_texture = @62DA3192FC6E0D58_rough.dds@
+            }
+        }
+
+        over "mat_EDC38329B3DEC243"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @EDC38329B3DEC243_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @EDC38329B3DEC243_height.dds@
+                asset inputs:normalmap_texture = @EDC38329B3DEC243_normal.dds@
+                asset inputs:reflectionroughness_texture = @EDC38329B3DEC243_rough.dds@
+            }
+        }
+
+        over "mat_7B723523F6CA18C4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7B723523F6CA18C4_albedo.dds@
+                asset inputs:normalmap_texture = @7B723523F6CA18C4_normal.dds@
+                asset inputs:reflectionroughness_texture = @7B723523F6CA18C4_rough.dds@
+            }
+        }
+
+        over "mat_4B0A5FA3B9CCAF3D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4B0A5FA3B9CCAF3D_albedo.dds@
+                asset inputs:normalmap_texture = @4B0A5FA3B9CCAF3D_normal.dds@
+                asset inputs:reflectionroughness_texture = @4B0A5FA3B9CCAF3D_rough.dds@
+            }
+        }
+
+        over "mat_C8218A017D01A611"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C8218A017D01A611_albedo.dds@
+                asset inputs:normalmap_texture = @C8218A017D01A611_normal.dds@
+                asset inputs:reflectionroughness_texture = @C8218A017D01A611_rough.dds@
+            }
+        }
+
+        over "mat_9D9892B1EEF426AD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9D9892B1EEF426AD_albedo.dds@
+                float inputs:metallic_constant = 0
+                asset inputs:metallic_texture = @9D9892B1EEF426AD_metal.dds@
+                asset inputs:normalmap_texture = @9D9892B1EEF426AD_normal.dds@
+                asset inputs:reflectionroughness_texture = @9D9892B1EEF426AD_rough.dds@
+            }
+        }
+
+        over "mat_C2D1D75807AC784A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C2D1D75807AC784A_albedo.dds@
+                asset inputs:normalmap_texture = @C2D1D75807AC784A_normal.dds@
+                asset inputs:reflectionroughness_texture = @C2D1D75807AC784A_rough.dds@
+            }
+        }
+
+        over "mat_7373AD60554E7220"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7373AD60554E7220_albedo.dds@
+                asset inputs:normalmap_texture = @7373AD60554E7220_normal.dds@
+                asset inputs:reflectionroughness_texture = @7373AD60554E7220_rough.dds@
+            }
+        }
+
+        over "mat_7807A272DDADDBE7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7807A272DDADDBE7_albedo.dds@
+                asset inputs:normalmap_texture = @7807A272DDADDBE7_normal.dds@
+                asset inputs:reflectionroughness_texture = @7807A272DDADDBE7_rough.dds@
+            }
+        }
+
+        over "mat_867FE3118D146901"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @867FE3118D146901_albedo.dds@
+                asset inputs:normalmap_texture = @867FE3118D146901_normal.dds@
+                asset inputs:reflectionroughness_texture = @867FE3118D146901_rough.dds@
+            }
+        }
+
+        over "mat_0DB0BED0C0EC4F93"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @0DB0BED0C0EC4F93_albedo.dds@
+                asset inputs:normalmap_texture = @0DB0BED0C0EC4F93_normal.dds@
+                asset inputs:reflectionroughness_texture = @0DB0BED0C0EC4F93_rough.dds@
+            }
+        }
+
+        over "mat_1A85CAAB0DA227BE"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0.099999994
+                float inputs:reflection_roughness_constant = 0.099999994
+            }
+        }
+
+        over "mat_BC33B29BC1AD0A81"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BC33B29BC1AD0A81_albedo.dds@
+                asset inputs:metallic_texture = @BC33B29BC1AD0A81_metal.dds@
+                asset inputs:normalmap_texture = @BC33B29BC1AD0A81_normal.dds@
+                asset inputs:reflectionroughness_texture = @BC33B29BC1AD0A81_rough.dds@
+            }
+        }
+
+        over "mat_D4541F0C633C740D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D4541F0C633C740D_albedo.dds@
+                asset inputs:normalmap_texture = @D4541F0C633C740D_normal.dds@
+                asset inputs:reflectionroughness_texture = @D4541F0C633C740D_rough.dds@
+            }
+        }
+
+        over "mat_78BF0347686EC06D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @78BF0347686EC06D_albedo.dds@
+                asset inputs:normalmap_texture = @78BF0347686EC06D_normal.dds@
+                asset inputs:reflectionroughness_texture = @78BF0347686EC06D_rough.dds@
+            }
+        }
+
+        over "mat_05B2EDC4A74B1FF6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @05B2EDC4A74B1FF6_albedo.dds@
+                asset inputs:normalmap_texture = @05B2EDC4A74B1FF6_normal.dds@
+                asset inputs:reflectionroughness_texture = @05B2EDC4A74B1FF6_rough.dds@
+            }
+        }
+
+        over "mat_6E8A9BAA93995C21"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6E8A9BAA93995C21_albedo.dds@
+                asset inputs:normalmap_texture = @6E8A9BAA93995C21_normal.dds@
+                asset inputs:reflectionroughness_texture = @6E8A9BAA93995C21_rough.dds@
+            }
+        }
+
+        over "mat_DC5FD93F9FFD0462"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                bool inputs:inverted_blend = 0
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_ABF7FE9360C3CB5D"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_AC9C3D4D04FD5964"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AC9C3D4D04FD5964_albedo.dds@
+                asset inputs:normalmap_texture = @AC9C3D4D04FD5964_normal.dds@
+                asset inputs:reflectionroughness_texture = @AC9C3D4D04FD5964_rough.dds@
+            }
+        }
+
+        over "mat_C278694CA548CB16"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C278694CA548CB16_albedo.dds@
+                asset inputs:metallic_texture = @C278694CA548CB16_metal.dds@
+                asset inputs:normalmap_texture = @C278694CA548CB16_normal.dds@
+                asset inputs:reflectionroughness_texture = @C2D1D75807AC784A_rough.dds@
+            }
+        }
+
+        over "mat_E7CE1191C5830599"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E7CE1191C5830599_albedo.dds@
+                asset inputs:metallic_texture = @E7CE1191C5830599_metal.dds@
+                asset inputs:normalmap_texture = @E7CE1191C5830599_normal.dds@
+                asset inputs:reflectionroughness_texture = @E7CE1191C5830599_rough.dds@
+            }
+        }
+
+        over "mat_B4A7E3F90CFB4573"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B4A7E3F90CFB4573_albedo.dds@
+                float inputs:emissive_intensity = 0.1
+                asset inputs:emissive_mask_texture = @B4A7E3F90CFB4573_emissive.dds@
+                bool inputs:enable_emission = 1
+                asset inputs:metallic_texture = @B4A7E3F90CFB4573_metal.dds@
+                asset inputs:normalmap_texture = @B4A7E3F90CFB4573_normal.dds@
+                asset inputs:reflectionroughness_texture = @B4A7E3F90CFB4573_rough.dds@
+            }
+        }
+
+        over "mat_B51A7EB0DE264B60"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B51A7EB0DE264B60_albedo.dds@
+                asset inputs:metallic_texture = @B51A7EB0DE264B60_metal.dds@
+                asset inputs:normalmap_texture = @B51A7EB0DE264B60_normal.dds@
+                asset inputs:reflectionroughness_texture = @B51A7EB0DE264B60_rough.dds@
+            }
+        }
+
+        over "mat_A550F9C12CE98A20"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A550F9C12CE98A20_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @A550F9C12CE98A20_height.dds@
+                asset inputs:normalmap_texture = @A550F9C12CE98A20_normal.dds@
+                asset inputs:reflectionroughness_texture = @A550F9C12CE98A20_rough.dds@
+            }
+        }
+
+        over "mat_F49B7A9D4244FB9C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F49B7A9D4244FB9C_albedo.dds@
+                asset inputs:normalmap_texture = @F49B7A9D4244FB9C_normal.dds@
+                asset inputs:reflectionroughness_texture = @F49B7A9D4244FB9C_rough.dds@
+            }
+        }
+
+        over "mat_52169DD586A96D83"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @52169DD586A96D83_albedo.dds@
+                asset inputs:normalmap_texture = @52169DD586A96D83_normal.dds@
+                asset inputs:reflectionroughness_texture = @52169DD586A96D83_rough.dds@
+            }
+        }
+
+        over "mat_4D12A5E11850D629"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4D12A5E11850D629_albedo.dds@
+                asset inputs:normalmap_texture = @4D12A5E11850D629_normal.dds@
+                asset inputs:reflectionroughness_texture = @4D12A5E11850D629_rough.dds@
+            }
+        }
+
+        over "mat_F086208F4945A3B7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F086208F4945A3B7_albedo.dds@
+                asset inputs:normalmap_texture = @F086208F4945A3B7_normal.dds@
+                asset inputs:reflectionroughness_texture = @F086208F4945A3B7_rough.dds@
+            }
+        }
+
+        over "mat_CF818F3E0ED49128"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CF818F3E0ED49128_albedo.dds@
+                asset inputs:normalmap_texture = @CF818F3E0ED49128_normal.dds@
+                asset inputs:reflectionroughness_texture = @CF818F3E0ED49128_rough.dds@
+            }
+        }
+
+        over "mat_AF36BA0DC7E478CF"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @AF36BA0DC7E478CF_albedo.dds@
+                asset inputs:normalmap_texture = @AF36BA0DC7E478CF_normal.dds@
+                asset inputs:reflectionroughness_texture = @AF36BA0DC7E478CF_rough.dds@
+            }
+        }
+
+        over "mat_5B7002DC3AD17615"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5B7002DC3AD17615_albedo.dds@
+                asset inputs:normalmap_texture = @5B7002DC3AD17615_normal.dds@
+                asset inputs:reflectionroughness_texture = @5B7002DC3AD17615_rough.dds@
+            }
+        }
+
+        over "mat_420ED129569D78E7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @420ED129569D78E7_albedo.dds@
+                asset inputs:normalmap_texture = @420ED129569D78E7_normal.dds@
+                asset inputs:reflectionroughness_texture = @420ED129569D78E7_rough.dds@
+            }
+        }
+
+        over "mat_429BFCCC78F68D55"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @429BFCCC78F68D55_albedo.dds@
+                asset inputs:normalmap_texture = @429BFCCC78F68D55_normal.dds@
+                asset inputs:reflectionroughness_texture = @429BFCCC78F68D55_rough.dds@
+            }
+        }
+
+        over "mat_350A0412380D585D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @350A0412380D585D_albedo.dds@
+                asset inputs:normalmap_texture = @350A0412380D585D_normal.dds@
+                asset inputs:reflectionroughness_texture = @350A0412380D585D_rough.dds@
+            }
+        }
+
+        over "mat_493B48246C56BB22"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @493B48246C56BB22_albedo.dds@
+                asset inputs:normalmap_texture = @493B48246C56BB22_normal.dds@
+                asset inputs:reflectionroughness_texture = @493B48246C56BB22_rough.dds@
+            }
+        }
+
+        over "mat_F850A8E748C8EB56"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 0.39999998
+            }
+        }
+
+        over "mat_5E787BD91DA10890"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5E787BD91DA10890_albedo.dds@
+                asset inputs:normalmap_texture = @5E787BD91DA10890_normal.dds@
+                asset inputs:reflectionroughness_texture = @5E787BD91DA10890_rough.dds@
+            }
+        }
+
+        over "mat_5B4D16CCBB382B4B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5B4D16CCBB382B4B_albedo.dds@
+                asset inputs:normalmap_texture = @5B4D16CCBB382B4B_normal.dds@
+                asset inputs:reflectionroughness_texture = @5B4D16CCBB382B4B_rough.dds@
+            }
+        }
+
+        over "mat_C1C489FDA217E668"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C1C489FDA217E668_albedo.dds@
+                asset inputs:normalmap_texture = @C1C489FDA217E668_normal.dds@
+                asset inputs:reflectionroughness_texture = @C1C489FDA217E668_rough.dds@
+            }
+        }
+
+        over "mat_2148A022D0580659"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2148A022D0580659_albedo.dds@
+                asset inputs:normalmap_texture = @2148A022D0580659_normal.dds@
+                asset inputs:reflectionroughness_texture = @2148A022D0580659_rough.dds@
+            }
+        }
+
+        over "mat_43B377A709BA103A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @43B377A709BA103A_albedo.dds@
+                asset inputs:normalmap_texture = @43B377A709BA103A_normal.dds@
+                asset inputs:reflectionroughness_texture = @43B377A709BA103A_rough.dds@
+            }
+        }
+
+        over "mat_6D69508BF68F2C8C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6D69508BF68F2C8C_albedo.dds@
+                asset inputs:metallic_texture = @6D69508BF68F2C8C_metal.dds@
+                asset inputs:normalmap_texture = @6D69508BF68F2C8C_normal.dds@
+                asset inputs:reflectionroughness_texture = @6D69508BF68F2C8C_rough.dds@
+            }
+        }
+
+        over "mat_D2A21B0BFC8E0915"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D2A21B0BFC8E0915_albedo.dds@
+                asset inputs:metallic_texture = @D2A21B0BFC8E0915_metal.dds@
+                asset inputs:normalmap_texture = @D2A21B0BFC8E0915_normal.dds@
+                asset inputs:reflectionroughness_texture = @D2A21B0BFC8E0915_rough.dds@
+            }
+        }
+
+        over "mat_F0E86134392C86DE"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F0E86134392C86DE_albedo.dds@
+                asset inputs:metallic_texture = @F0E86134392C86DE_metal.dds@
+                asset inputs:normalmap_texture = @F0E86134392C86DE_normal.dds@
+                asset inputs:reflectionroughness_texture = @F0E86134392C86DE_rough.dds@
+            }
+        }
+
+        over "mat_ED76BFD80A17FC79"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @ED76BFD80A17FC79_albedo.dds@
+                asset inputs:metallic_texture = @ED76BFD80A17FC79_metal.dds@
+                asset inputs:normalmap_texture = @ED76BFD80A17FC79_normal.dds@
+                asset inputs:reflectionroughness_texture = @ED76BFD80A17FC79_rough.dds@
+            }
+        }
+
+        over "mat_6BE738E83DF2D5DE"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6BE738E83DF2D5DE_albedo.dds@
+                asset inputs:normalmap_texture = @6BE738E83DF2D5DE_normal.dds@
+                asset inputs:reflectionroughness_texture = @6BE738E83DF2D5DE_rough.dds@
+            }
+        }
+
+        over "mat_331AB327284472D5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./331AB327284472D5_albedo.dds@
+                float inputs:displace_in = 0.001
+                asset inputs:height_texture = @./331AB327284472D5_height.dds@
+                asset inputs:metallic_texture = @./331AB327284472D5_metal.dds@
+                asset inputs:normalmap_texture = @./331AB327284472D5_normal.dds@
+                asset inputs:reflectionroughness_texture = @./331AB327284472D5_rough.dds@
+            }
+        }
+
+        over "mat_6B3382E3E6A1647E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6B3382E3E6A1647E_albedo.dds@
+                asset inputs:metallic_texture = @6B3382E3E6A1647E_metal.dds@
+                asset inputs:normalmap_texture = @6B3382E3E6A1647E_normal.dds@
+                asset inputs:reflectionroughness_texture = @6B3382E3E6A1647E_rough.dds@
+            }
+        }
+
+        over "mat_96DE87C515B4D39A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @96DE87C515B4D39A_albedo.dds@
+                asset inputs:metallic_texture = @@
+                asset inputs:normalmap_texture = @96DE87C515B4D39A_normal.dds@
+                asset inputs:reflectionroughness_texture = @96DE87C515B4D39A_rough.dds@
+            }
+        }
+
+        over "mat_5BF3D874A1873F17"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5BF3D874A1873F17_albedo.dds@
+                float inputs:displace_in = 0.005
+                asset inputs:height_texture = @5BF3D874A1873F17_albedo.dds@
+                asset inputs:normalmap_texture = @5BF3D874A1873F17_normal.dds@
+                asset inputs:reflectionroughness_texture = @5BF3D874A1873F17_rough.dds@
+            }
+        }
+
+        over "mat_8985DD8F379DDF9C"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.049999997
+            }
+        }
+
+        over "mat_FBFFF9FC43DC8392"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @FBFFF9FC43DC8392_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @FBFFF9FC43DC8392_height.dds@
+                asset inputs:normalmap_texture = @FBFFF9FC43DC8392_normal.dds@
+                asset inputs:reflectionroughness_texture = @FBFFF9FC43DC8392_rough.dds@
+            }
+        }
+
+        over "mat_F0CE23F66CBCFE43"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.099999994
+            }
+        }
+
+        over "mat_343D85A6071E0CA7"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @343D85A6071E0CA7_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @343D85A6071E0CA7_normal.dds@
+                float inputs:reflection_roughness_constant = 0
+                asset inputs:reflectionroughness_texture = @343D85A6071E0CA7_rough.dds@
+            }
+        }
+
+        over "mat_C0582B2C22B4AAAC"
+        {
+            over "Shader"
+            {
+                float inputs:metallic_constant = 1
+                float inputs:reflection_roughness_constant = 0
+            }
+        }
+
+        over "mat_59167EDD461AB846"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @59167EDD461AB846_albedo.dds@
+                asset inputs:normalmap_texture = @59167EDD461AB846_normal.dds@
+                asset inputs:reflectionroughness_texture = @59167EDD461AB846_rough.dds@
+            }
+        }
+
+        over "mat_EBE2D7315FCD172B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @EBE2D7315FCD172B_albedo.dds@
+                asset inputs:normalmap_texture = @EBE2D7315FCD172B_normal.dds@
+                asset inputs:reflectionroughness_texture = @EBE2D7315FCD172B_rough.dds@
+            }
+        }
+
+        over "mat_4A952FC1D6A83D5F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4A952FC1D6A83D5F_albedo.dds@
+                asset inputs:normalmap_texture = @4A952FC1D6A83D5F_normal.dds@
+                asset inputs:reflectionroughness_texture = @4A952FC1D6A83D5F_rough.dds@
+            }
+        }
+
+        over "mat_C2FDB0BDA980C4E4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C2FDB0BDA980C4E4_albedo.dds@
+                asset inputs:normalmap_texture = @C2FDB0BDA980C4E4_normal.dds@
+                asset inputs:reflectionroughness_texture = @C2FDB0BDA980C4E4_rough.dds@
+            }
+        }
+
+        over "mat_65F0189A0D42A3A5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @65F0189A0D42A3A5_albedo.dds@
+                asset inputs:metallic_texture = @65F0189A0D42A3A5_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @65F0189A0D42A3A5_normal.dds@
+                asset inputs:reflectionroughness_texture = @65F0189A0D42A3A5_rough.dds@
+            }
+        }
+
+        over "mat_1E37855899D18868"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1E37855899D18868_albedo.dds@
+                asset inputs:metallic_texture = @1E37855899D18868_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @1E37855899D18868_normal.dds@
+                asset inputs:reflectionroughness_texture = @1E37855899D18868_rough.dds@
+            }
+        }
+
+        over "mat_69C61410E938473F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @69C61410E938473F_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @69C61410E938473F_height.dds@
+                asset inputs:normalmap_texture = @69C61410E938473F_normal.dds@
+                asset inputs:reflectionroughness_texture = @69C61410E938473F_rough.dds@
+            }
+        }
+
+        over "mat_CCD5BFA335C949A0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @CCD5BFA335C949A0_albedo.dds@
+                float inputs:displace_in = 0.01
+                asset inputs:height_texture = @./CCD5BFA335C949A0_height.dds@
+                asset inputs:metallic_texture = @./CCD5BFA335C949A0_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @./CCD5BFA335C949A0_normal.dds@
+                asset inputs:reflectionroughness_texture = @./CCD5BFA335C949A0_rough.dds@
+            }
+        }
+
+        over "mat_133BCD65B5834D72"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @133BCD65B5834D72_albedo.dds@
+                float inputs:displace_in = 0.01
+                asset inputs:height_texture = @./133BCD65B5834D72_height.dds@
+                asset inputs:metallic_texture = @./133BCD65B5834D72_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @./133BCD65B5834D72_normal.dds@
+                asset inputs:reflectionroughness_texture = @./133BCD65B5834D72_rough.dds@
+            }
+        }
+
+        over "mat_2D717CCF8DED01EC"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.049999997
+            }
+        }
+
+        over "mat_D63B50BC57E2D195"
+        {
+            over "Shader"
+            {
+                float inputs:reflection_roughness_constant = 0.049999997
+            }
+        }
+
+        over "mat_9E96401B6C7A82C0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9E96401B6C7A82C0_albedo.dds@
+                asset inputs:normalmap_texture = @./9E96401B6C7A82C0_normal.dds@
+                asset inputs:reflectionroughness_texture = @./9E96401B6C7A82C0_rough.dds@
+            }
+        }
+
+        over "mat_866C6F83AD3D60F6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @866C6F83AD3D60F6_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./866C6F83AD3D60F6_normal.dds@
+                asset inputs:reflectionroughness_texture = @./866C6F83AD3D60F6_rough.dds@
+            }
+        }
+
+        over "mat_5691A789C44F71F4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5691A789C44F71F4_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @./5691A789C44F71F4_height.dds@
+                asset inputs:normalmap_texture = @./5691A789C44F71F4_normal.dds@
+                asset inputs:reflectionroughness_texture = @./5691A789C44F71F4_rough.dds@
+            }
+        }
+
+        over "mat_C3EA78B5D9D4F6E8"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C3EA78B5D9D4F6E8_albedo.dds@
+                asset inputs:metallic_texture = @./C3EA78B5D9D4F6E8_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @./C3EA78B5D9D4F6E8_normal.dds@
+                asset inputs:reflectionroughness_texture = @./C3EA78B5D9D4F6E8_rough.dds@
+            }
+        }
+
+        over "mat_931D33FCB32FED43"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @931D33FCB32FED43_albedo.dds@
+                asset inputs:normalmap_texture = @./931D33FCB32FED43_normal.dds@
+                asset inputs:reflectionroughness_texture = @./931D33FCB32FED43_rough.dds@
+            }
+        }
+
+        over "mat_15A9C8933649CB5D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @15A9C8933649CB5D_albedo.dds@
+                asset inputs:normalmap_texture = @./15A9C8933649CB5D_normal.dds@
+                asset inputs:reflectionroughness_texture = @./15A9C8933649CB5D_rough.dds@
+            }
+        }
+
+        over "mat_199BC9AB413F35E3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @199BC9AB413F35E3_albedo.dds@
+                asset inputs:normalmap_texture = @./199BC9AB413F35E3_normal.dds@
+                asset inputs:reflectionroughness_texture = @./199BC9AB413F35E3_rough.dds@
+            }
+        }
+
+        over "mat_DEFD302F7A966C1E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @DEFD302F7A966C1E_albedo.dds@
+                asset inputs:normalmap_texture = @./DEFD302F7A966C1E_normal.dds@
+                asset inputs:reflectionroughness_texture = @./DEFD302F7A966C1E_rough.dds@
+            }
+        }
+
+        over "mat_22F573A5EFA89C5F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @22F573A5EFA89C5F_albedo.dds@
+                asset inputs:normalmap_texture = @./22F573A5EFA89C5F_normal.dds@
+                asset inputs:reflectionroughness_texture = @./22F573A5EFA89C5F_rough.dds@
+            }
+        }
+
+        over "mat_B7B3CC1E1522477C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @B7B3CC1E1522477C_albedo.dds@
+                asset inputs:normalmap_texture = @./B7B3CC1E1522477C_normal.dds@
+                asset inputs:reflectionroughness_texture = @./B7B3CC1E1522477C_rough.dds@
+            }
+        }
+
+        over "mat_2F7AFF2EA826E4BB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2F7AFF2EA826E4BB_albedo.dds@
+                asset inputs:normalmap_texture = @./2F7AFF2EA826E4BB_normal.dds@
+                asset inputs:reflectionroughness_texture = @./2F7AFF2EA826E4BB_rough.dds@
+            }
+        }
+
+        over "mat_7AF5AE75DC3D8791"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7AF5AE75DC3D8791_albedo.dds@
+                asset inputs:normalmap_texture = @./7AF5AE75DC3D8791_normal.dds@
+                asset inputs:reflectionroughness_texture = @./7AF5AE75DC3D8791_rough.dds@
+            }
+        }
+
+        over "mat_FAB5688A7D10E059"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @FAB5688A7D10E059_albedo.dds@
+                asset inputs:metallic_texture = @./FAB5688A7D10E059_metal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Metallic Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @./FAB5688A7D10E059_normal.dds@
+                asset inputs:reflectionroughness_texture = @./FAB5688A7D10E059_rough.dds@
+            }
+        }
+
+        over "mat_1DA2C72B760FE157"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @1DA2C72B760FE157_albedo.dds@
+                asset inputs:normalmap_texture = @./1DA2C72B760FE157_normal.dds@
+                asset inputs:reflectionroughness_texture = @./1DA2C72B760FE157_rough.dds@
+            }
+        }
+
+        over "mat_4DA13BB573353F3E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4DA13BB573353F3E_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @./4DA13BB573353F3E_height.dds@
+                asset inputs:normalmap_texture = @./4DA13BB573353F3E_normal.dds@
+                asset inputs:reflectionroughness_texture = @./4DA13BB573353F3E_rough.dds@
+            }
+        }
+
+        over "mat_516DD6553349BC7C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @516DD6553349BC7C_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @./516DD6553349BC7C_height.dds@
+                asset inputs:normalmap_texture = @./516DD6553349BC7C_normal.dds@
+                asset inputs:reflectionroughness_texture = @./516DD6553349BC7C_rough.dds@
+            }
+        }
+
+        over "mat_8315B31565E00718"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8315B31565E00718_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./8315B31565E00718_normal.dds@
+                asset inputs:reflectionroughness_texture = @./8315B31565E00718_rough.dds@
+            }
+        }
+
+        over "mat_09865FF23B81F547"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @09865FF23B81F547_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./09865FF23B81F547_normal.dds@
+                asset inputs:reflectionroughness_texture = @./09865FF23B81F547_rough.dds@
+            }
+        }
+
+        over "mat_2104FD2EA3781385"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2104FD2EA3781385_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./2104FD2EA3781385_normal.dds@
+                asset inputs:reflectionroughness_texture = @./2104FD2EA3781385_rough.dds@
+            }
+        }
+
+        over "mat_90912814B895243B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @90912814B895243B_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./90912814B895243B_normal.dds@
+                asset inputs:reflectionroughness_texture = @./90912814B895243B_rough.dds@
+            }
+        }
+
+        over "mat_49221076C4EB10E5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @49221076C4EB10E5_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./49221076C4EB10E5_normal.dds@
+                asset inputs:reflectionroughness_texture = @./49221076C4EB10E5_rough.dds@
+            }
+        }
+
+        over "mat_BD761EFC7A55A6CA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BD761EFC7A55A6CA_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./BD761EFC7A55A6CA_normal.dds@
+                asset inputs:reflectionroughness_texture = @./BD761EFC7A55A6CA_rough.dds@
+            }
+        }
+
+        over "mat_E64585BAC6FA566F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E64585BAC6FA566F_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./E64585BAC6FA566F_normal.dds@
+                asset inputs:reflectionroughness_texture = @./E64585BAC6FA566F_rough.dds@
+            }
+        }
+
+        over "mat_09580703AD21AF29"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @09580703AD21AF29_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./09580703AD21AF29_normal.dds@
+                asset inputs:reflectionroughness_texture = @./09580703AD21AF29_rough.dds@
+            }
+        }
+
+        over "mat_008FAF9568F2AE68"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @008FAF9568F2AE68_albedo.dds@
+                asset inputs:normalmap_texture = @./008FAF9568F2AE68_normal.dds@
+                asset inputs:reflectionroughness_texture = @./008FAF9568F2AE68_rough.dds@
+            }
+        }
+
+        over "mat_540FA8B8B5746429"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @540FA8B8B5746429_albedo.dds@
+                asset inputs:normalmap_texture = @./540FA8B8B5746429_normal.dds@
+                asset inputs:reflectionroughness_texture = @./540FA8B8B5746429_rough.dds@
+            }
+        }
+
+        over "mat_9FC4420D1DC0AD08"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @9FC4420D1DC0AD08_albedo.dds@
+                asset inputs:normalmap_texture = @./9FC4420D1DC0AD08_normal.dds@
+                asset inputs:reflectionroughness_texture = @./9FC4420D1DC0AD08_rough.dds@
+            }
+        }
+
+        over "mat_5AD2AE1C0980AD6B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @5AD2AE1C0980AD6B_albedo.dds@
+                asset inputs:normalmap_texture = @./5AD2AE1C0980AD6B_normal.dds@
+                asset inputs:reflectionroughness_texture = @./5AD2AE1C0980AD6B_rough.dds@
+            }
+        }
+
+        over "mat_620E313F8E729983"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @620E313F8E729983_albedo.dds@
+                asset inputs:normalmap_texture = @./620E313F8E729983_normal.dds@
+                asset inputs:reflectionroughness_texture = @./620E313F8E729983_rough.dds@
+            }
+        }
+
+        over "mat_891E2E58229C9D2D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @891E2E58229C9D2D_albedo.dds@
+                asset inputs:normalmap_texture = @./891E2E58229C9D2D_normal.dds@
+                asset inputs:reflectionroughness_texture = @./891E2E58229C9D2D_rough.dds@
+            }
+        }
+
+        over "mat_8089E229D7DE60EC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8089E229D7DE60EC_albedo.dds@
+                asset inputs:normalmap_texture = @./8089E229D7DE60EC_normal.dds@
+                asset inputs:reflectionroughness_texture = @./8089E229D7DE60EC_rough.dds@
+            }
+        }
+
+        over "mat_C0BD59B33B657085"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @C0BD59B33B657085_albedo.dds@
+                asset inputs:normalmap_texture = @./C0BD59B33B657085_normal.dds@
+                asset inputs:reflectionroughness_texture = @./C0BD59B33B657085_rough.dds@
+            }
+        }
+
+        over "mat_D1C09E9F4FCBC1A5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D1C09E9F4FCBC1A5_albedo.dds@
+                float inputs:metallic_constant = 1
+                asset inputs:normalmap_texture = @./D1C09E9F4FCBC1A5_normal.dds@
+                asset inputs:reflectionroughness_texture = @./D1C09E9F4FCBC1A5_rough.dds@
+            }
+        }
+
+        over "mat_E045B6D94CC09E70"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E045B6D94CC09E70_albedo.dds@
+                asset inputs:normalmap_texture = @./E045B6D94CC09E70_normal.dds@
+                asset inputs:reflectionroughness_texture = @./E045B6D94CC09E70_rough.dds@
+            }
+        }
+
+        over "mat_D1ACC93F83E887F2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D1ACC93F83E887F2_albedo.dds@
+                asset inputs:normalmap_texture = @./D1ACC93F83E887F2_normal.dds@
+                asset inputs:reflectionroughness_texture = @./D1ACC93F83E887F2_rough.dds@
+            }
+        }
+
+        over "mat_3A84152B90D84D20"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @3A84152B90D84D20_albedo.dds@
+                asset inputs:normalmap_texture = @./3A84152B90D84D20_normal.dds@
+                asset inputs:reflectionroughness_texture = @./3A84152B90D84D20_rough.dds@
+            }
+        }
+
+        over "mat_26AAAF2446346285"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @26AAAF2446346285_albedo.dds@
+                asset inputs:normalmap_texture = @./26AAAF2446346285_normal.dds@
+                asset inputs:reflectionroughness_texture = @./26AAAF2446346285_rough.dds@
+            }
+        }
+
+        over "mat_4E48C13A003F4F6B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4E48C13A003F4F6B_albedo.dds@
+                float inputs:displace_in = 0.02
+                asset inputs:height_texture = @./4E48C13A003F4F6B_height.dds@
+                asset inputs:normalmap_texture = @./4E48C13A003F4F6B_normal.dds@
+                asset inputs:reflectionroughness_texture = @./4E48C13A003F4F6B_rough.dds@
+            }
+        }
+
+        over "mat_3E7DCFDAF17590E1"
+        {
+            over "Shader"
+            {
+                bool inputs:blend_enabled = 1
+                int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @3E7DCFDAF17590E1_albedo.dds@
+                bool inputs:inverted_blend = 0
+                float inputs:metallic_constant = 0
+                asset inputs:normalmap_texture = @./3E7DCFDAF17590E1_normal.dds@
+                asset inputs:reflectionroughness_texture = @./3E7DCFDAF17590E1_rough.dds@
+                bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_AD7B33EBE5A660F4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./AD7B33EBE5A660F4_albedo.dds@
+                asset inputs:normalmap_texture = @./AD7B33EBE5A660F4_normal.dds@
+                asset inputs:reflectionroughness_texture = @./AD7B33EBE5A660F4_rough.dds@
+            }
+        }
+
+        over "mat_8BE5B4DB21086744"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./8BE5B4DB21086744_albedo.dds@
+                asset inputs:normalmap_texture = @./8BE5B4DB21086744_normal.dds@
+                asset inputs:reflectionroughness_texture = @./8BE5B4DB21086744_rough.dds@
+            }
+        }
+    }
+}
+

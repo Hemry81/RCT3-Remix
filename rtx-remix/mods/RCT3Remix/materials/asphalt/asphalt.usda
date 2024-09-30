@@ -1,0 +1,146 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_F1DC3DA814A2048E"
+        {
+            over "Shader"
+            {
+                int inputs:alpha_test_type = 0 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Alpha Blending"
+                    displayName = "Alpha Test Type"
+                    doc = """The alpha state alpha test type to use.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "AlphaTestType"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "Always"
+                        string options = "Always:0|Never:1|Less:2|Equal:3|LessOrEqual:4|Greater:5|NotEqual:6|GreaterOrEqual:7"
+                    }
+                )
+                bool inputs:blend_enabled = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Alpha Blending"
+                    displayName = "Blend Enabled"
+                    doc = """Indicates if alpha state blending should be enabled.
+
+"""
+                    hidden = false
+                )
+                int inputs:blend_type = 0 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Alpha Blending"
+                    displayName = "Blend Type"
+                    doc = """The alpha state blend type to use.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "BlendType"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "Alpha"
+                        string options = "Alpha:0|AlphaEmissive:1|ReverseAlphaEmissive:2|Color:3|ColorEmissive:4|ReverseColorEmissive:5|Emissive:6|Multiplicative:7|DoubleMultiplicative:8"
+                    }
+                )
+                asset inputs:diffuse_texture = @Asphalt015_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:displace_in = 0.003 (
+                    customData = {
+                        float default = 0.05
+                        dictionary range = {
+                            float max = 0.2
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Displacement"
+                    displayName = "Inwards Displacement"
+                    doc = """Ratio of UV width to depth.  If the texture is displayed as 1 meter wide, then a value of 1 means it can be at most 1 meter deep.  A value of 0.1 means that same 1 meter wide quad can be at most 0.1 meters deep.
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:height_texture = @Asphalt015_height.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Displacement"
+                    displayName = "Height Map"
+                    doc = """A pixel value of 0 is the lowest point.  A pixel value of 1 will be the highest point.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:inverted_blend = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Alpha Blending"
+                    displayName = "Inverted Blend"
+                    doc = """Indicates if an inverted blend type should be used.
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @Asphalt015_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @Asphalt015_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                bool inputs:use_legacy_alpha_state = 0 (
+                    customData = {
+                        bool default = 1
+                    }
+                    displayGroup = "Alpha Blending"
+                    displayName = "Use Legacy Alpha State"
+                    doc = """Indicates if the alpha state should be driven by the game itself, or overridden by this material.
+
+"""
+                    hidden = false
+                )
+            }
+        }
+    }
+}
+

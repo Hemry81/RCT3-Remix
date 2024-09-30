@@ -1,0 +1,1634 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_49C2809BDA4BA234"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @49C2809BDA4BA234_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @49C2809BDA4BA234_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @49C2809BDA4BA234_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_0204519FE5E3261C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @0204519FE5E3261C_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @0204519FE5E3261C_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @0204519FE5E3261C_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmittance_color = (0.114130676, 0.5096525, 0.20270315) (
+                    customData = {
+                        float3 default = (0.5, 0.5, 0.5)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Color"
+                    doc = """The transmittance color of subsurface materials. This property can be easily considered as the light color after passing through volume. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+                float inputs:subsurface_volumetric_anisotropy = 0 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 0.99
+                            float min = -0.99
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Volumetric Anisotropy"
+                    doc = """The anisotropy of the scattering phase function. 0.99 = light mostly passes straight through (forward), 0 = light spreads a lot (diffuse), -0.99 = light mostly reflects (backward).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+            }
+        }
+
+        over "mat_E7B4E6026B753F6A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @E7B4E6026B753F6A_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @E7B4E6026B753F6A_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @E7B4E6026B753F6A_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmittance_color = (0.19691122, 0.16717911, 0.14141114) (
+                    customData = {
+                        float3 default = (0.5, 0.5, 0.5)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Color"
+                    doc = """The transmittance color of subsurface materials. This property can be easily considered as the light color after passing through volume. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+            }
+        }
+
+        over "mat_A944079668E5AA81"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A944079668E5AA81_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @A944079668E5AA81_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @A944079668E5AA81_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmittance_color = (0.2741313, 0.24468434, 0.21380125) (
+                    customData = {
+                        float3 default = (0.5, 0.5, 0.5)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Color"
+                    doc = """The transmittance color of subsurface materials. This property can be easily considered as the light color after passing through volume. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+            }
+        }
+
+        over "mat_6A74A8E17CB0A6CD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @6A74A8E17CB0A6CD_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @6A74A8E17CB0A6CD_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @6A74A8E17CB0A6CD_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmittance_color = (0.15891233, 0.3166023, 0.20153126) (
+                    customData = {
+                        float3 default = (0.5, 0.5, 0.5)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Color"
+                    doc = """The transmittance color of subsurface materials. This property can be easily considered as the light color after passing through volume. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+            }
+        }
+
+        over "mat_39FD4C4C588F38F8"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @39FD4C4C588F38F8_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @39FD4C4C588F38F8_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @39FD4C4C588F38F8_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @39FD4C4C588F38F8_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_2C1CC8AC7FF8A0BD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2C1CC8AC7FF8A0BD_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @2C1CC8AC7FF8A0BD_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @2C1CC8AC7FF8A0BD_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @2C1CC8AC7FF8A0BD_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_8CB2D57408393EAD"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @8CB2D57408393EAD_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @8CB2D57408393EAD_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @8CB2D57408393EAD_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @8CB2D57408393EAD_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_D68F7CF40AF82297"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D68F7CF40AF82297_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @D68F7CF40AF82297_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @D68F7CF40AF82297_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_50F2D68CBD559E4A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @50F2D68CBD559E4A_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @50F2D68CBD559E4A_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @50F2D68CBD559E4A_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_4113E419EDCC9575"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @4113E419EDCC9575_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @4113E419EDCC9575_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @4113E419EDCC9575_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_BF766F1A3643510B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BF766F1A3643510B_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @BF766F1A3643510B_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @BF766F1A3643510B_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_F497B276ACCD0802"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F497B276ACCD0802_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @F497B276ACCD0802_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @F497B276ACCD0802_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_74E59B511D6557F0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @74E59B511D6557F0_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @74E59B511D6557F0_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @74E59B511D6557F0_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_BF95BEEC76427CF6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BF95BEEC76427CF6_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @BF95BEEC76427CF6_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @BF95BEEC76427CF6_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_D50F72A06131E9C5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D50F72A06131E9C5_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @D50F72A06131E9C5_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @D50F72A06131E9C5_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_D09333D6B0A2BA22"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @D09333D6B0A2BA22_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @D09333D6B0A2BA22_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @D09333D6B0A2BA22_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @D09333D6B0A2BA22_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_7F745250B233C9F9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @7F745250B233C9F9_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @7F745250B233C9F9_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @7F745250B233C9F9_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @7F745250B233C9F9_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_BAA2FAA6AAE33EBA"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @BAA2FAA6AAE33EBA_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @BAA2FAA6AAE33EBA_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @BAA2FAA6AAE33EBA_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @BAA2FAA6AAE33EBA_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_77471B20F68AE160"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @77471B20F68AE160_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @77471B20F68AE160_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @77471B20F68AE160_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_818A0259CB9DE7C5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @818A0259CB9DE7C5_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @818A0259CB9DE7C5_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @818A0259CB9DE7C5_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @818A0259CB9DE7C5_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_297530C84EFCCB8E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @297530C84EFCCB8E_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @297530C84EFCCB8E_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @297530C84EFCCB8E_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @297530C84EFCCB8E_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_042C20F4229128EC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @042C20F4229128EC_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @042C20F4229128EC_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @042C20F4229128EC_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_456287156384EFEE"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @456287156384EFEE_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @456287156384EFEE_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @456287156384EFEE_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_A4D4A004B9E2BB49"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @A4D4A004B9E2BB49_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @A4D4A004B9E2BB49_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @A4D4A004B9E2BB49_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_2EF8A53DF066E738"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @2EF8A53DF066E738_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @2EF8A53DF066E738_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @2EF8A53DF066E738_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @2EF8A53DF066E738_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_43540554D9042150"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @43540554D9042150_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @43540554D9042150_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @43540554D9042150_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @43540554D9042150_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+
+        over "mat_F00BFCC13D95540E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @F00BFCC13D95540E_albedo.dds@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @F00BFCC13D95540E_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:reflectionroughness_texture = @F00BFCC13D95540E_rough.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Roughness Map"
+                    doc = """A single channel texture defining roughness per texel.  Higher roughness values lead to more blurry reflections.
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:subsurface_measurement_distance = 0.01 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 16
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Measurement Distance"
+                    doc = """The distance between front and back surface of subsurface materials in millimeter, or the thickness of the surface. (Used if no texture is specified).
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:subsurface_transmittance_texture = @F00BFCC13D95540E_albedo.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Transmittance Map"
+                    doc = """The texture specifying the transmittance color of subsurface materials.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+            }
+        }
+    }
+}
+

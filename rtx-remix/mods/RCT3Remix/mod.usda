@@ -1,0 +1,14 @@
+#usda 1.0
+(
+    customLayerData = {
+        string lightspeed_game_name = "RCT3"
+        string lightspeed_layer_type = "replacement"
+    }
+    subLayers = [
+        @./meshes/mesh.usda@,
+        @./meshes/sky/sky.usda@,
+        @./materials.usda@
+    ]
+    timeCodesPerSecond = 24
+    upAxis = "Z"
+)

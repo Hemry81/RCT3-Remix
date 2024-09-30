@@ -1,0 +1,207 @@
+#usda 1.0
+(
+    subLayers = [
+        @./materials/character/character.usda@,
+        @./materials/shared/sharedMaterials.usda@,
+        @./materials/scenery/scenery.usda@,
+        @./materials/vegetation/vegetation.usda@,
+        @./materials/effect/effect.usda@,
+        @./materials/asphalt/asphalt.usda@,
+        @./materials/rides/rides.usda@,
+        @./materials/water/water.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "Looks"
+{
+    def Material "Windows_Glass"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Windows_Glass/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Windows_Glass/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Windows_Glass/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @./materials/AperturePBR_Translucent.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+            float inputs:ior_constant = 1.5999999 (
+                customData = {
+                    float default = 1.3
+                    dictionary range = {
+                        float max = 3
+                        float min = 1
+                    }
+                }
+                displayGroup = "Specular"
+                displayName = "Index of Refraction"
+                doc = """Index of Refraction of the material
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+
+    def Material "Tunnel_Glass"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Tunnel_Glass/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Tunnel_Glass/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Tunnel_Glass/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @./materials/AperturePBR_Translucent.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+            float inputs:ior_constant = 1.5999999 (
+                customData = {
+                    float default = 1.3
+                    dictionary range = {
+                        float max = 3
+                        float min = 1
+                    }
+                }
+                displayGroup = "Specular"
+                displayName = "Index of Refraction"
+                doc = """Index of Refraction of the material
+
+"""
+                hidden = false
+            )
+            float inputs:transmittance_measurement_distance = 1 (
+                customData = {
+                    float default = 1
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0.001
+                    }
+                }
+                displayGroup = "Volume"
+                displayName = "Transmittance Measurement Distance"
+                doc = """Distance to match the transmittance through the volume at.
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+
+    def Material "Metal_Shiny"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Metal_Shiny/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Metal_Shiny/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Metal_Shiny/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @./materials/AperturePBR_Opacity.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
+            float inputs:metallic_constant = 0.59999996 (
+                customData = {
+                    float default = 0
+                    dictionary range = {
+                        float max = 1
+                        float min = 0
+                    }
+                }
+                displayGroup = "Base Material"
+                displayName = "Metallic Amount"
+                doc = """How metallic is this material, 0 for not at all, 1 for fully metallic. (Used if no texture is specified).
+
+"""
+                hidden = false
+            )
+            float inputs:reflection_roughness_constant = 0 (
+                customData = {
+                    float default = 0.5
+                    dictionary range = {
+                        float max = 1
+                        float min = 0
+                    }
+                }
+                displayGroup = "Base Material"
+                displayName = "Roughness Amount"
+                doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+
+    def Material "Aquarium_Glass"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Aquarium_Glass/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Aquarium_Glass/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Aquarium_Glass/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @./materials/AperturePBR_Translucent.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+            float inputs:ior_constant = 1.8 (
+                customData = {
+                    float default = 1.3
+                    dictionary range = {
+                        float max = 3
+                        float min = 1
+                    }
+                }
+                displayGroup = "Specular"
+                displayName = "Index of Refraction"
+                doc = """Index of Refraction of the material
+
+"""
+                hidden = false
+            )
+            color3f inputs:transmittance_color = (0.12745786, 0.55532587, 0.66023165) (
+                customData = {
+                    float3 default = (0.97, 0.97, 0.97)
+                    dictionary range = {
+                        float3 max = (1, 1, 1)
+                        float3 min = (0, 0, 0)
+                    }
+                }
+                displayGroup = "Volume"
+                displayName = "Transmittance Color"
+                doc = """Expected transmittance after the specified transmittance distance through the volume.
+
+"""
+                hidden = false
+                renderType = "color"
+            )
+            float inputs:transmittance_measurement_distance = 0.2 (
+                customData = {
+                    float default = 1
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0.001
+                    }
+                }
+                displayGroup = "Volume"
+                displayName = "Transmittance Measurement Distance"
+                doc = """Distance to match the transmittance through the volume at.
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+}
+

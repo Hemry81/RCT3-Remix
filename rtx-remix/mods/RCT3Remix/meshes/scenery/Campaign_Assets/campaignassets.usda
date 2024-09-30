@@ -1,0 +1,1707 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+
+over "RootNode"
+{
+    over "meshes"
+    {
+        over "mesh_4E6368210DC8E070"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Glass_T1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T1.usd@
+            )
+            {
+                rel material:binding = </Looks/Tunnel_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_8C6DD838B6F660D4"
+        {
+            def Xform "Glass_T2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T2.usd@
+            )
+            {
+                rel material:binding = </Looks/Tunnel_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 180, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_EFE2577B79E30A24"
+        {
+            def Xform "Glass_T3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T3.usd@
+            )
+            {
+                rel material:binding = </Looks/Tunnel_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 180, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_B31E8D378C99D880"
+        {
+            def Xform "Glass_T4" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T4.usd@
+            )
+            {
+                rel material:binding = </Looks/Tunnel_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 180, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_C7E88B2F498E343F"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Glass_T5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T5.usd@
+            )
+            {
+                rel material:binding = </Looks/Tunnel_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 90, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A974C78006D7E17E"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Glass_T6" (
+                references = @./Water Tunnel/Water_Tunnel_Glass_T6.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "visual_correction_005"
+                {
+                    over "mesh_A974C78006D7E17E"
+                    {
+                        over "mesh_006" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Metal_Shiny> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "mesh_005" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Tunnel_Glass> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_7E6F5C1C2462CF85"
+        {
+            def Xform "Glass_T7" (
+                references = @./Water Tunnel/Water_Tunnel_Glass_T7.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "visual_correction_006"
+                {
+                    over "mesh_7E6F5C1C2462CF85"
+                    {
+                        over "mesh_008" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Metal_Shiny> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "mesh_007" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Tunnel_Glass> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+                }
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_AF01476101BF4BB3"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Glass_T7" (
+                references = @./Water Tunnel/Water_Tunnel_Glass_T7.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "visual_correction_006"
+                {
+                    over "mesh_7E6F5C1C2462CF85"
+                    {
+                        over "mesh_008" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Metal_Shiny> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "mesh_007" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Tunnel_Glass> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_E0D97B4599301F4B"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Glass_T6" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Water Tunnel/Water_Tunnel_Glass_T6.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22.000000327825546, 16.00000023841858, 14.000000208616257)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "visual_correction_005"
+                {
+                    over "mesh_A974C78006D7E17E"
+                    {
+                        over "mesh_006" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Looks/Metal_Shiny> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_13865D87EE27C3B4"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_8BC51B45ED6DBBD7"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_16CBF6E16DBCD7A9"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_90802A697747F977"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_46B748305D2C4317"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_4329B867F11A4A91"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_74E4ADADD74A4564"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_CE5FAFA5A358D454"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_180378A77E624D0C"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_F9910755F0EC5E18"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_2B25AF8406B7B445"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_4A7D079F86C8A9CA"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_3C73A17B2CB47392"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_2DC92F3ED20073FD"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_7886E24ED477097C"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_8A6227FF30A51926"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_5CB9868DDF56E18F"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_829D39C7F0A7EC79"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A8FA8715EAB1B5A9"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_7DEBC30CCE850961"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_051997E8163A9010"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_0D0ED67C9C79B123"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_5105F0F1281832A8"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_0C30C57301F60CF2"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_53EC115931812F19"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_AD41ED0837432172"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_B98EFB9FA8CD0051"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_C237E273B46954B4"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_9771F8AA2188131C"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_2D38554CFDA34B0D"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_4A2E414E4D5AB14A"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_8850970D7D99DDBB"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_B2DA7A30C4A65FD7"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_B3F5CCDA7A30D65E"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_E0F0037A8F38F2D2"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_0C680BC9242C95DE"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A0957412E1A49E53"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_BDED143F4479F0A7"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_3C4C85EDCB0A70E8"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38, 16.00000023841858, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_36248E25020F6A52"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_BEE70734F336D635"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_90A62E586E00722D"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_E62A18D1A9741194"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_E92C969A288AAD10"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_E540EDEAB5C30F05"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22.000000327825546, 16, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_86F5986CAD6F20F6"
+        {
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22.000000327825546, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_5FA7FBF8A8FD01C9"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A15BD357108C8827"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_586A8F8DB393BDD4"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22.000000327825546, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_09AE7AB2DE725EFB"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_ED550A99083C7701"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_4666CD7BC5ED1AAB"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22.000000327825546, 16, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_37A119662866BD4F"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_20F1DBE67A8C67B3"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_E4D75E9C6697EE87"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Xform "Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Water_Surface.usdc@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_7ED939C54D76A95C"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_4CCBEA39BF315CC4"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @./Big Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-38.000000566244125, 16.00000023841858, 2.0000000298023224)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_7F9748F9B526D6A6"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/scenery/Campaign_Assets/Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_0AF31C857F688047"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/scenery/Campaign_Assets/Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A18DF38E017B3D1D"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Glass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/scenery/Campaign_Assets/Middle Fish Tank/Fish_Tank_Glass.usd@
+            )
+            {
+                rel material:binding = </Looks/Aquarium_Glass> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_AC9050BA681B5E28"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Middle_Fish_Tank_Water_Surface" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/scenery/Campaign_Assets/Middle Fish Tank/Water_Surface.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-22, 16, 2)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+    }
+}
+

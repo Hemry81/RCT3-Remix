@@ -1,0 +1,459 @@
+#usda 1.0
+(
+    subLayers = [
+        @../../materials/cloud/cloud.usda@
+    ]
+    upAxis = "Y"
+)
+
+over "RootNode"
+{
+    over "meshes"
+    {
+        over "mesh_1EAC158813BDC840"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Sky" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @SkyDome.usd@
+            )
+            {
+                rel material:binding = </Looks/Sky_day_01> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (5, 5, 5)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_0DC11B762DA5343E"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "night_sky" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @SkyDome.usd@
+            )
+            {
+                rel material:binding = </Looks/Sky_night_01> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (15, 15, 15)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_151BEA167240C27F"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Sky" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/sky/SkyDome.usd@
+            )
+            {
+                rel material:binding = </Looks/Sky_day_02> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (5, 5, 5)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_B8377247660DD93F"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_9AD0C3FFAF7A0510"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "night_sky" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/sky/SkyDome.usd@
+            )
+            {
+                rel material:binding = </Looks/Sky_night_01> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (15, 15, 15)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_B2DD40509B9BF4AF"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "night_sky" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @D:/Games/remix/RCT3/meshes/sky/SkyDome.usd@
+            )
+            {
+                rel material:binding = </Looks/Sky_night_01> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (-90, 0, 0)
+                double3 xformOp:scale = (15, 15, 15)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+    }
+}
+
+def Scope "Looks"
+{
+    def Material "Sky_day_01"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Sky_day_01/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Sky_day_01/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Sky_day_01/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @../../materials/AperturePBR_Opacity.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
+            bool inputs:blend_enabled = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Blend Enabled"
+                doc = """Indicates if alpha state blending should be enabled.
+
+"""
+                hidden = false
+            )
+            asset inputs:diffuse_texture = @sky_day_01.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Base Material"
+                displayName = "Albedo/Opacity Map"
+                doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            float inputs:emissive_intensity = 0.1 (
+                customData = {
+                    float default = 40
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0
+                    }
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Intensity"
+                doc = """Intensity of the emission
+
+"""
+                hidden = false
+            )
+            asset inputs:emissive_mask_texture = @sky_day_01.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Mask Map"
+                doc = """The texture masking the emissive color
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            bool inputs:enable_emission = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Emission"
+                displayName = "Enable Emission"
+                doc = """Enables the emission of light from the material
+
+"""
+                hidden = false
+            )
+            float inputs:reflection_roughness_constant = 1 (
+                customData = {
+                    float default = 0.5
+                    dictionary range = {
+                        float max = 1
+                        float min = 0
+                    }
+                }
+                displayGroup = "Base Material"
+                displayName = "Roughness Amount"
+                doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                hidden = false
+            )
+            bool inputs:use_legacy_alpha_state = 0 (
+                customData = {
+                    bool default = 1
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Use Legacy Alpha State"
+                doc = """Indicates if the alpha state should be driven by the game itself, or overridden by this material.
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+
+    def Material "Sky_day_02"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Sky_day_02/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Sky_day_02/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Sky_day_02/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @../../materials/AperturePBR_Opacity.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
+            bool inputs:blend_enabled = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Blend Enabled"
+                doc = """Indicates if alpha state blending should be enabled.
+
+"""
+                hidden = false
+            )
+            asset inputs:diffuse_texture = @sky_day_02.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Base Material"
+                displayName = "Albedo/Opacity Map"
+                doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            float inputs:emissive_intensity = 0.1 (
+                customData = {
+                    float default = 40
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0
+                    }
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Intensity"
+                doc = """Intensity of the emission
+
+"""
+                hidden = false
+            )
+            asset inputs:emissive_mask_texture = @sky_day_02.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Mask Map"
+                doc = """The texture masking the emissive color
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            bool inputs:enable_emission = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Emission"
+                displayName = "Enable Emission"
+                doc = """Enables the emission of light from the material
+
+"""
+                hidden = false
+            )
+            float inputs:reflection_roughness_constant = 1 (
+                customData = {
+                    float default = 0.5
+                    dictionary range = {
+                        float max = 1
+                        float min = 0
+                    }
+                }
+                displayGroup = "Base Material"
+                displayName = "Roughness Amount"
+                doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                hidden = false
+            )
+            bool inputs:use_legacy_alpha_state = 0 (
+                customData = {
+                    bool default = 1
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Use Legacy Alpha State"
+                doc = """Indicates if the alpha state should be driven by the game itself, or overridden by this material.
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+
+    def Material "Sky_night_01"
+    {
+        token outputs:mdl:displacement.connect = </Looks/Sky_night_01/Shader.outputs:out>
+        token outputs:mdl:surface.connect = </Looks/Sky_night_01/Shader.outputs:out>
+        token outputs:mdl:volume.connect = </Looks/Sky_night_01/Shader.outputs:out>
+
+        def Shader "Shader"
+        {
+            uniform token info:implementationSource = "sourceAsset"
+            uniform asset info:mdl:sourceAsset = @../../materials/AperturePBR_Opacity.mdl@
+            uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
+            bool inputs:blend_enabled = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Blend Enabled"
+                doc = """Indicates if alpha state blending should be enabled.
+
+"""
+                hidden = false
+            )
+            asset inputs:diffuse_texture = @sky_night_01.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Base Material"
+                displayName = "Albedo/Opacity Map"
+                doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            float inputs:emissive_intensity = 0.02 (
+                customData = {
+                    float default = 40
+                    dictionary range = {
+                        float max = 65504
+                        float min = 0
+                    }
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Intensity"
+                doc = """Intensity of the emission
+
+"""
+                hidden = false
+            )
+            asset inputs:emissive_mask_texture = @sky_night_01.dds@ (
+                colorSpace = "auto"
+                customData = {
+                    asset default = @@
+                }
+                displayGroup = "Emission"
+                displayName = "Emissive Mask Map"
+                doc = """The texture masking the emissive color
+
+"""
+                hidden = false
+                renderType = "texture_2d"
+            )
+            bool inputs:enable_emission = 1 (
+                customData = {
+                    bool default = 0
+                }
+                displayGroup = "Emission"
+                displayName = "Enable Emission"
+                doc = """Enables the emission of light from the material
+
+"""
+                hidden = false
+            )
+            float inputs:reflection_roughness_constant = 1 (
+                customData = {
+                    float default = 0.5
+                    dictionary range = {
+                        float max = 1
+                        float min = 0
+                    }
+                }
+                displayGroup = "Base Material"
+                displayName = "Roughness Amount"
+                doc = """Higher roughness values lead to more blurry reflections, use 0 for perfectly smooth.  (Used if no texture is specified).
+
+"""
+                hidden = false
+            )
+            bool inputs:use_legacy_alpha_state = 0 (
+                customData = {
+                    bool default = 1
+                }
+                displayGroup = "Alpha Blending"
+                displayName = "Use Legacy Alpha State"
+                doc = """Indicates if the alpha state should be driven by the game itself, or overridden by this material.
+
+"""
+                hidden = false
+            )
+            token outputs:out (
+                renderType = "material"
+            )
+        }
+    }
+}
+
