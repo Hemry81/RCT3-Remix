@@ -1,6 +1,6 @@
-# RollerCoaster 3 Remix Mod
+# RollerCoaster Tycoon 3 Complete Edition Remix Mod
 
-Welcome to the RollerCoaster 3 Remix Mod! This exciting mod aims to enhance the classic RollerCoaster Tycoon 3 experience by incorporating various improvements and new features. Join our passionate community of modders and enthusiasts as we work together to breathe new life into this beloved simulation game.
+Welcome to the RollerCoaster Tycoon 3 Complete Edition Remix Mod! This exciting mod aims to enhance the classic RollerCoaster Tycoon 3 experience by incorporating various improvements and new features. Join our passionate community of modders and enthusiasts as we work together to breathe new life into this beloved simulation game.
 
 ## Key Features
 
@@ -14,7 +14,7 @@ Follow these step-by-step instructions to install the RollerCoaster 3 Remix Mod:
 
 2. **Download the Mod**: Visit the official RollerCoaster 3 Remix Mod repository and download the latest version of the mod.
 
-3. **Install the Mod**: Extract the downloaded mod files to your RollerCoaster Tycoon 3 game directory. This is typically located at `C:\Program Files (x86)\Steam\steamapps\common\RollerCoaster Tycoon 3`.
+3. **Install the Mod**: Extract the downloaded mod files to your RollerCoaster Tycoon 3 game directory. This is typically located at `C:\Program Files (x86)\Steam\steamapps\common\RollerCoaster Tycoon 3 Complete Edition`.
 
 4. **Launch the Game**: Start the game and enjoy the enhanced RollerCoaster Tycoon 3 experience with the RollerCoaster 3 Remix Mod installed.
 
