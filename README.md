@@ -18,6 +18,10 @@ Follow these step-by-step instructions to install the RollerCoaster 3 Remix Mod:
 
 4. **Launch the Game**: Start the game and enjoy the enhanced RollerCoaster Tycoon 3 experience with the RollerCoaster 3 Remix Mod installed.
 
+5. **Adjust the Settings**: Following the guide screenshot below to adjust the game settings.
+
+![Guide Screenshot](screenshot/guide.png)
+
 ## Community and Contributions
 
 We welcome and appreciate contributions from the RollerCoaster Tycoon 3 modding community. If you have suggestions, bug reports, or improvements for the RollerCoaster 3 Remix Mod, please feel free to submit them through the official project repository.
