@@ -24,7 +24,7 @@ Follow these step-by-step instructions to install the RollerCoaster 3 Remix Mod:
 
 ## Community and Contributions
 
-We welcome and appreciate contributions from the RollerCoaster Tycoon 3 modding community. If you have suggestions, bug reports, or improvements for the RollerCoaster 3 Remix Mod, please feel free to submit them through the official project repository.
+We warmly welcome and greatly appreciate contributions from the RollerCoaster Tycoon 3 modding community. If you have any suggestions, bug reports, or improvements for the RCT3 Remix Mod, please feel free to submit them through the official project repository or our Discord channel.
 
 To maintain a positive and constructive environment, we ask that all contributors adhere to the following guidelines:
 
