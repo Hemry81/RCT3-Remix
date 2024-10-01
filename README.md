@@ -38,6 +38,6 @@ To maintain a positive and constructive environment, we ask that all contributor
 Keep up with the latest updates and news about the RollerCoaster 3 Remix Mod through the following channels:
 
 - **RTX-Remix Discord Channel**: [Join here](https://discord.gg/rtxremix)
-- **GTASA Remix Discord Group**: [Join here](https://discord.com/channels/1028444667789967381/1226091998767743049) (Requires joining the RTX-Remix Discord channel first).
+- **RCT3 Remix Discord Channel**: [Join here](https://discord.com/channels/1028444667789967381/1226091998767743049) (Requires joining the RTX-Remix Discord channel first).
 
 We're excited to have you join the RollerCoaster 3 Remix Mod community. Together, let's create an unforgettable park-building experience!
