@@ -11,7 +11,47 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:normalmap_texture = @ripple_01_normal.dds@ (
+                asset inputs:diffuse_texture = @@ (
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base Material"
+                    displayName = "Albedo/Opacity Map"
+                    doc = """The texture specifying the albedo value and the optional opacity value to use in the alpha channel
+
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                float inputs:displace_in = 0.099999994 (
+                    customData = {
+                        float default = 0.05
+                        dictionary range = {
+                            float max = 0.2
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Displacement"
+                    displayName = "Inwards Displacement"
+                    doc = """Ratio of UV width to depth.  If the texture is displayed as 1 meter wide, then a value of 1 means it can be at most 1 meter deep.  A value of 0.1 means that same 1 meter wide quad can be at most 0.1 meters deep.
+This parameter is unused.
+"""
+                    hidden = false
+                )
+                asset inputs:height_texture = @./ripple_01_height.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Displacement"
+                    displayName = "Height Map"
+                    doc = """A pixel value of 0 is the lowest point.  A pixel value of 1 will be the highest point.
+This parameter is unused.
+"""
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                asset inputs:normalmap_texture = @./ripple_01_normal.dds@ (
                     colorSpace = "auto"
                     customData = {
                         asset default = @@
@@ -78,117 +118,14 @@ over "RootNode"
                 uniform token info:implementationSource = "sourceAsset"
                 uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
                 uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
-                float inputs:ior_constant = 1.3299999 (
-                    customData = {
-                        float default = 1.3
-                        dictionary range = {
-                            float max = 3
-                            float min = 1
-                        }
-                    }
-                    displayGroup = "Specular"
-                    displayName = "Index of Refraction"
-                    doc = """Index of Refraction of the material
-
-"""
-                    hidden = false
-                )
-                asset inputs:normalmap_texture = @water_normal.dds@ (
-                    customData = {
-                        asset default = @@
-                    }
-                    displayGroup = "Normal"
-                    displayName = "Normal Map"
-                    hidden = false
-                    renderType = "texture_2d"
-                )
-                int inputs:sprite_sheet_cols = 20 (
-                    customData = {
-                        int default = 1
-                        dictionary range = {
-                            int max = 255
-                            int min = 1
-                        }
-                    }
-                    displayGroup = "Animation"
-                    displayName = "Sprite Sheet Columns"
-                    doc = """Number of columns the spritesheet across all textures is divided into.
-
-"""
-                    hidden = false
-                )
-                int inputs:sprite_sheet_fps = 30 (
-                    customData = {
-                        int default = 0
-                        dictionary range = {
-                            int max = 255
-                            int min = 0
-                        }
-                    }
-                    displayGroup = "Animation"
-                    displayName = "Sprite Sheet FPS"
-                    doc = """Framerate in Frames Per Second to use for the spritesheet across all textures. Note that a value of 0 disables this functionality.
-
-"""
-                    hidden = false
-                )
-                int inputs:sprite_sheet_rows = 1 (
-                    customData = {
-                        int default = 1
-                        dictionary range = {
-                            int max = 255
-                            int min = 1
-                        }
-                    }
-                    displayGroup = "Animation"
-                    displayName = "Sprite Sheet Rows"
-                    doc = """Number of row the spritesheet across all textures is divided into.
-
-"""
-                    hidden = false
-                )
-                bool inputs:thin_walled = 0 (
-                    customData = {
-                        bool default = 0
-                    }
-                    displayGroup = "Specular"
-                    displayName = "Thin-walled"
-                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
-
-"""
-                    hidden = false
-                )
-                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
-                    customData = {
-                        float3 default = (0.97, 0.97, 0.97)
-                        dictionary range = {
-                            float3 max = (1, 1, 1)
-                            float3 min = (0, 0, 0)
-                        }
-                    }
-                    displayGroup = "Volume"
-                    displayName = "Transmittance Color"
-                    doc = """Expected transmittance after the specified transmittance distance through the volume.
-
-"""
-                    hidden = false
-                    renderType = "color"
-                )
-                float inputs:transmittance_measurement_distance = 5 (
-                    customData = {
-                        float default = 1
-                        dictionary range = {
-                            float max = 65504
-                            float min = 0.001
-                        }
-                    }
-                    displayGroup = "Volume"
-                    displayName = "Transmittance Measurement Distance"
-                    doc = """Distance to match the transmittance through the volume at.
-
-"""
-                    hidden = false
-                )
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @water_normal.dds@
+                int inputs:sprite_sheet_cols = 20
+                int inputs:sprite_sheet_fps = 30
+                int inputs:sprite_sheet_rows = 1
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
                 token outputs:out (
                     renderType = "material"
                 )
@@ -652,72 +589,11 @@ over "RootNode"
                 uniform token info:implementationSource = "sourceAsset"
                 uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
                 uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
-                float inputs:ior_constant = 1.3299999 (
-                    customData = {
-                        float default = 1.3
-                        dictionary range = {
-                            float max = 3
-                            float min = 1
-                        }
-                    }
-                    displayGroup = "Specular"
-                    displayName = "Index of Refraction"
-                    doc = """Index of Refraction of the material
-
-"""
-                    hidden = false
-                )
-                asset inputs:normalmap_texture = @DECF443D608D850D_normal.dds@ (
-                    customData = {
-                        asset default = @@
-                    }
-                    displayGroup = "Normal"
-                    displayName = "Normal Map"
-                    hidden = false
-                    renderType = "texture_2d"
-                )
-                bool inputs:thin_walled = 0 (
-                    customData = {
-                        bool default = 0
-                    }
-                    displayGroup = "Specular"
-                    displayName = "Thin-walled"
-                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
-
-"""
-                    hidden = false
-                )
-                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
-                    customData = {
-                        float3 default = (0.97, 0.97, 0.97)
-                        dictionary range = {
-                            float3 max = (1, 1, 1)
-                            float3 min = (0, 0, 0)
-                        }
-                    }
-                    displayGroup = "Volume"
-                    displayName = "Transmittance Color"
-                    doc = """Expected transmittance after the specified transmittance distance through the volume.
-
-"""
-                    hidden = false
-                    renderType = "color"
-                )
-                float inputs:transmittance_measurement_distance = 5 (
-                    customData = {
-                        float default = 1
-                        dictionary range = {
-                            float max = 65504
-                            float min = 0.001
-                        }
-                    }
-                    displayGroup = "Volume"
-                    displayName = "Transmittance Measurement Distance"
-                    doc = """Distance to match the transmittance through the volume at.
-
-"""
-                    hidden = false
-                )
+                float inputs:ior_constant = 1.3299999
+                asset inputs:normalmap_texture = @DECF443D608D850D_normal.dds@
+                bool inputs:thin_walled = 0
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616)
+                float inputs:transmittance_measurement_distance = 5
                 token outputs:out (
                     renderType = "material"
                 )
@@ -954,6 +830,131 @@ over "RootNode"
 
 """
                     hidden = false
+                )
+            }
+        }
+
+        over "mat_C572C7D1E2242F5E"
+        {
+            over "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @../AperturePBR_Translucent.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Translucent"
+                float inputs:ior_constant = 1.3299999 (
+                    customData = {
+                        float default = 1.3
+                        dictionary range = {
+                            float max = 3
+                            float min = 1
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Index of Refraction"
+                    doc = """Index of Refraction of the material
+
+"""
+                    hidden = false
+                )
+                asset inputs:normalmap_texture = @water_normal.dds@ (
+                    colorSpace = "auto"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Normal"
+                    displayName = "Normal Map"
+                    hidden = false
+                    renderType = "texture_2d"
+                )
+                int inputs:sprite_sheet_cols = 20 (
+                    customData = {
+                        int default = 1
+                        dictionary range = {
+                            int max = 255
+                            int min = 1
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet Columns"
+                    doc = """Number of columns the spritesheet across all textures is divided into.
+
+"""
+                    hidden = false
+                )
+                int inputs:sprite_sheet_fps = 30 (
+                    customData = {
+                        int default = 0
+                        dictionary range = {
+                            int max = 255
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet FPS"
+                    doc = """Framerate in Frames Per Second to use for the spritesheet across all textures. Note that a value of 0 disables this functionality.
+
+"""
+                    hidden = false
+                )
+                int inputs:sprite_sheet_rows = 1 (
+                    customData = {
+                        int default = 1
+                        dictionary range = {
+                            int max = 255
+                            int min = 1
+                        }
+                    }
+                    displayGroup = "Animation"
+                    displayName = "Sprite Sheet Rows"
+                    doc = """Number of row the spritesheet across all textures is divided into.
+
+"""
+                    hidden = false
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Thin-walled"
+                    doc = """Whether the material is thin-walled, use when material is being applied to single triangle thick geometry.
+
+"""
+                    hidden = false
+                )
+                color3f inputs:transmittance_color = (0.4496057, 0.8030888, 0.7498616) (
+                    customData = {
+                        float3 default = (0.97, 0.97, 0.97)
+                        dictionary range = {
+                            float3 max = (1, 1, 1)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Color"
+                    doc = """Expected transmittance after the specified transmittance distance through the volume.
+
+"""
+                    hidden = false
+                    renderType = "color"
+                )
+                float inputs:transmittance_measurement_distance = 5 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 65504
+                            float min = 0.001
+                        }
+                    }
+                    displayGroup = "Volume"
+                    displayName = "Transmittance Measurement Distance"
+                    doc = """Distance to match the transmittance through the volume at.
+
+"""
+                    hidden = false
+                )
+                token outputs:out (
+                    renderType = "material"
                 )
             }
         }
@@ -1314,15 +1315,6 @@ over "RootNode"
             }
         }
 
-        over "mesh_A36A62440E8AD3E5"
-        {
-            over "mesh" (
-                active = false
-            )
-            {
-            }
-        }
-
         over "mesh_CD479BAA066CF48F"
         {
             def Xform "Water" (
@@ -1339,15 +1331,6 @@ over "RootNode"
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
             }
 
-            over "mesh" (
-                active = false
-            )
-            {
-            }
-        }
-
-        over "mesh_F2F5073BF9D9BBC5"
-        {
             over "mesh" (
                 active = false
             )
@@ -1423,15 +1406,146 @@ over "RootNode"
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
             }
         }
-    }
 
-    over "instances"
-    {
-        over "inst_8E6D1DCAE2D00CB0_0"
+        over "mesh_77C03EE0D43DB1BC"
         {
-            over "Water"
+            over "mesh" (
+                active = false
+            )
             {
-                double3 xformOp:translate = (0, 14.000000208616257, 0)
+            }
+
+            def Xform "Water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = @../../meshes/water/mesh_77C03EE0D43DB1BC.usd@
+            )
+            {
+                rel material:binding = </Looks/Water> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "visual_correction_002"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                }
+            }
+        }
+
+        over "mesh_F2F5073BF9D9BBC5"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_A36A62440E8AD3E5"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_5CEAD18A2C4CDD31"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water" (
+                references = @../../meshes/water/mesh_5CEAD18A2C4CDD31.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A758DD072DA19785"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water" (
+                references = @../../meshes/water/mesh_A758DD072DA19785.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_11F00BC0B96DC30C"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water" (
+                references = @../../meshes/water/mesh_11F00BC0B96DC30C.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        over "mesh_A679A08209BFE56C"
+        {
+            def Xform "Xform" (
+                references = @../../meshes/water/mesh_A679A08209BFE56C.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "mesh_A5A2A280C86114B0"
+        {
+            over "mesh" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "Water" (
+                references = @../../meshes/water/mesh_A5A2A280C86114B0.usd@
+            )
+            {
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
             }
         }
     }
